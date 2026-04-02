@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Formiga Coffee</title>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body 
+class="h-screen flex items-center justify-center bg-cover bg-center "
+style="background-image: url('./img/cafe.avif');">
+
+  <!-- CARD -->
+  <div class="flex w-[900px]  rounded-2xl p-8">
+
+    
+    <div class="w-1/2 flex items-center justify-center">
+      <div class="w-60 h-60 bg-white rounded-full flex items-center justify-center">
+        <span class="text-2xl font-bold">Logo</span>
+      </div>
+    </div>
+
+ 
+    <div class="w-1/2 flex flex-col justify-center gap-4 text-white">
+
+      <h1 class="text-2xl font-semibold">Formiga Coffee</h1>
+      <p class="text-sm text-gray-200">Abra uma conta</p>
+
+      <input type="email" placeholder="email@dominio.com"
+        class="p-2 rounded bg-white/80 text-black outline-none">
+
+      <input type="password" placeholder="crie uma senha"
+        class="p-2 rounded bg-white/80 text-black outline-none">
+
+      <button class="bg-red-900 hover:bg-red-800 p-2 rounded">
+        Entrar
+      </button>
+
+      <p class="text-center text-sm text-gray-300">ou continue com</p>
+
+      <button class="bg-white text-black p-2 rounded flex items-center justify-center gap-2">
+        <img src="https://cdn-icons-png.flaticon.com/512/281/281764.png" class="w-5">
+        Entrar pelo Google
+      </button>
+
+    </div>
+
+  </div>
+
+</body>
+</html>
