@@ -1,13 +1,17 @@
-@import "tailwindcss";
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>antCoffee</title>
+    <title>AntCoffee2 Tailwind</title>
+    <link rel="stylesheet" href="dist/styles.css" />
   </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+  <body class="bg-gray-100 text-gray-800">
+    <main class="min-h-screen flex items-center justify-center">
+      <div class="max-w-md p-8 bg-white rounded-xl shadow-lg">
+        <h1 class="text-3xl font-bold mb-4">Tailwind instalado!</h1>
+        <p class="text-gray-600">Este projeto está usando Tailwind CSS a partir de build local.</p>
+      </div>
+    </main>
   </body>
 </html>
