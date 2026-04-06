@@ -22,62 +22,130 @@
 
         <!-- LINHA -->
         <div class="border-t mb-6"></div>
+        <div class="">
 
-        <!-- CARD INFO -->
-        <div class="border border-[#c9a3a3] rounded-xl p-6 mb-6 bg-white/70">
-            <div class="">
-                <div class="flex justify-between items-center mb-4">
-                    <div class="row">
-                        <div class="flex items-center gap-4 mb-3">
-                            <img src="./img/cafeGelado.png" alt="Café Gelado" />
-                            <span class="font-medium">Café Gelado</span>
-                            <p>R$ 16,90</p>
-                            <div class="flex items-center space-x-2">
-                                <button class="bg-bordo text-white px-3 py-1 rounded">-</button>
-                                <span class="text-black font-semibold">1</span>
-                                <button class="bg-bordo text-white px-3 py-1 rounded">+</button>
+            <!-- Troque o wrapper por este (mesma estrutura, só ajustando as classes) -->
+            <div class="flex flex-row justify-between items-start gap-6 w-full">
+                <!-- CARD INFO -->
+                <div class="border border-[#c9a3a3] rounded-xl p-6 mb-6 bg-white/70 flex-1">
+                    <div class="">
+                        <div class="flex justify-between items-center mb-4">
+                            <div class="row">
+                                <div class="flex items-center gap-4 mb-3">
+                                    <img src="./img/cafeGelado.png" alt="Café Gelado" />
+                                    <span class="font-medium">Café Gelado</span>
+                                    <p>R$ 16,90</p>
+                                    <div class="flex items-center space-x-2">
+                                        <button
+                                            class="bg-red-950 text-white px-3 py-1 rounded flex items-center justify-center">
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                                stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14" />
+                                            </svg>
+                                        </button>
+                                        <span class="text-black font-semibold">1</span>
+                                        <button
+                                            class="bg-red-950 text-white px-3 py-1 rounded flex items-center justify-center">
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                                stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                    d="M12 4.5v15m7.5-7.5h-15" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-center gap-4 mb-3">
+                                    <img src="./img/boloMorango.png" alt="Bolo de Morango" />
+                                    <span class="font-medium">Bolo de Morango</span>
+                                    <p>R$ 24,90</p>
+                                    <div class="flex items-center space-x-2">
+                                        <button
+                                            class="bg-red-950 text-white px-3 py-1 rounded flex items-center justify-center">
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                                stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14" />
+                                            </svg>
+                                        </button>
+                                        <span class="text-black font-semibold">1</span>
+                                        <button
+                                            class="bg-red-950 text-white px-3 py-1 rounded flex items-center justify-center">
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                                stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                    d="M12 4.5v15m7.5-7.5h-15" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-center gap-4 mb-3">
+                                    <img src="./img/boloChoco.png" alt="Bolo de Chocolate" />
+                                    <span class="font-medium">Bolo de Chocolate</span>
+                                    <p>R$ 29,90</p>
+                                    <div class="flex items-center space-x-2">
+                                        <button
+                                            class="bg-red-950 text-white px-3 py-1 rounded flex items-center justify-center">
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                                stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14" />
+                                            </svg>
+                                        </button>
+                                        <span class="text-black font-semibold">1</span>
+                                        <button
+                                            class="bg-red-950 text-white px-3 py-1 rounded flex items-center justify-center">
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                                stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                    d="M12 4.5v15m7.5-7.5h-15" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="flex items-center gap-4 mb-3">
-                            <img src="./img/boloMorango.png" alt="Bolo de Morango" />
-                            <span class="font-medium">Bolo de Morango</span>
-                            <p>R$ 24,90</p>
-                        </div>
-                        <div class="flex items-center gap-4 mb-3">
-                            <img src="./img/boloChoco.png" alt="Bolo de Chocolate" />
-                            <span class="font-medium">Bolo de Chocolate</span>
-                            <p>R$ 29,90</p>
+                        <div class="flex flex-row-reverse">
+                            <div class="flex justify-end mt-4 ms-4">
+                                <button class="bg-[#5a0f14] text-white px-4 py-1 rounded-full w-24">
+                                    Salvar
+                                </button>
+                            </div>
+                            <div class="flex justify-end mt-4">
+                                <button class="bg-[#5a0f14] text-white px-4 py-1 rounded-full w-24">
+                                    71,70
+                                </button>
+                            </div>
                         </div>
                     </div>
-                    <button class="text-sm bg-gray-200 px-3 py-1 rounded-full">
-                        ✏️ Edit
-                    </button>
                 </div>
 
-                <div class="flex justify-end mt-4">
-                    <button class="bg-[#5a0f14] text-white px-4 py-1 rounded-full">
-                        Salvar
-                    </button>
+                <!-- CARD Pagamento -->
+                <div class="border border-[#c9a3a3] rounded-xl p-6 bg-white/70 w-full max-w-sm self-start">
+                    <div class="flex-col justify-between items-center mb-4">
+                        <h2 class="font-semibold">Detalhes de Pagamento</h2>
+                        <div class="flex">
+                            <p class="text-gray-600">Nome:</p>
+                            <p class="text-gray-950 ms-2">Shakira Shakira</p>
+                        </div>
+                        <div class="flex">
+                            <p class="text-gray-600">Telefone:</p>
+                            <p class="text-gray-950 ms-2">41 91234-5678</p>
+                        </div>
+                        <div class="flex">
+                            <p class="text-gray-600">Endereço:</p>
+                            <p class="text-gray-950 ms-2">Rua Doutor José Pinto Rebelo Junior, 91 - Centro, Matinhos - PR, 83260-000</p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-
-        <!-- CARD Pagamento -->
-        <div class="border border-[#c9a3a3] rounded-xl p-6 bg-white/70">
-            <div class="flex justify-between items-center mb-4">
-                <h2 class="font-semibold">Formas de Pagamento</h2>
                 <button class="text-sm bg-gray-200 px-3 py-1 rounded-full">
                     ✏️ Edit
                 </button>
             </div>
-        </div>
-
-        <!-- FOOTER -->
-        <div class="mt-10 text-center text-sm text-gray-500">
-            <p>Home | Cardápio | Doces | Bolos | Cafés</p>
-            <p class="mt-2">© 2026 | Todos os direitos reservados.</p>
-        </div>
-    </div>
+            <!-- FOOTER -->
+            <div class="mt-10 text-center text-sm text-gray-500">
+                <p>Home | Cardápio | Doces | Bolos | Cafés</p>
+                <p class="mt-2">© 2026 | Todos os direitos reservados.</p>
+            </div>
 </body>
 
 </html>
