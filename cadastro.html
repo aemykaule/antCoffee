@@ -4,24 +4,34 @@
   <meta charset="UTF-8">
   <title>Formiga Coffee</title>
 
-  
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="h-screen flex items-center justify-center bg-cover bg-center" style="background-image: url('./img/cafe');">
+<body class="h-screen flex items-center justify-center bg-cover bg-center"
+      style="background-image: url('https://images.unsplash.com/photo-1559403283-06fa4b7c7795?q=80&w=1176&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
 
-  <div class="flex w-[900px]  rounded-2xl p-8 ">
+  <div class="flex w-[1000px] rounded-2xl p-8">
+
+    <!-- LADO ESQUERDO (LOGO) -->
     <div class="w-1/2 flex items-center justify-center">
-      <img src="./img/imagem.png" 
-              class="w-72 opacity-90">
-      </div>
-    
+      <img src="./img/imagem.png"
+           class="w-80 opacity-90">
+    </div>
 
- 
-    <div class="w-1/2 flex flex-col justify-center gap-4 text-white">
+    <!-- LADO DIREITO (FORMULÁRIO) -->
+    <div class="w-1/2 flex flex-col justify-center gap-3 text-white">
 
       <h1 class="text-2xl font-semibold">Formiga Coffee</h1>
       <p class="text-sm text-gray-200">Abra uma conta</p>
+
+      <input type="text" placeholder="Nome Completo"
+        class="p-2 rounded bg-white/80 text-black outline-none">
+
+      <input type="text" placeholder="Nº Telefone"
+        class="p-2 rounded bg-white/80 text-black outline-none">
+
+      <input type="text" placeholder="CPF"
+        class="p-2 rounded bg-white/80 text-black outline-none">
 
       <input type="email" placeholder="email@dominio.com"
         class="p-2 rounded bg-white/80 text-black outline-none">
@@ -30,14 +40,14 @@
         class="p-2 rounded bg-white/80 text-black outline-none">
 
       <button class="bg-red-900 hover:bg-red-800 p-2 rounded">
-        Entrar
+        Criar conta
       </button>
 
       <p class="text-center text-sm text-gray-300">ou continue com</p>
 
       <button class="bg-white text-black p-2 rounded flex items-center justify-center gap-2">
         <img src="https://cdn-icons-png.flaticon.com/512/281/281764.png" class="w-5">
-        Entrar pelo Google
+        Cadastrar pelo Google
       </button>
 
     </div>
