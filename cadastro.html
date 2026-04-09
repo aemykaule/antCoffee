@@ -2,57 +2,47 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Formiga Coffee</title>
-
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="h-screen flex items-center justify-center bg-cover bg-center"
+<body class="min-h-screen flex items-center justify-center bg-cover bg-center p-4"
       style="background-image: url('./img/foto.cafe.avif');">
 
-  <div class="flex w-[1000px] rounded-2xl p-8">
+  <div class="flex flex-col lg:flex-row w-full max-w-4xl rounded-3xl p-8 lg:p-12 
+              bg-white/10 backdrop-blur-md border border-white/20 shadow-2xl">
 
-    <!-- LADO ESQUERDO (LOGO) -->
-    <div class="w-1/2 flex items-center justify-center">
-      <img src="./img/imagem.png"
-           class="w-80 opacity-90">
+    <div class="w-full lg:w-1/2 flex items-center justify-center mb-8 lg:mb-0">
+      <img src="./img/imagem.png" class="w-64 lg:w-80 drop-shadow-2xl opacity-90" alt="Logo">
     </div>
 
-    <!-- LADO DIREITO (FORMULÁRIO) -->
-    <div class="w-1/2 flex flex-col justify-center gap-3 text-white">
+    <div class="w-full lg:w-1/2 flex flex-col justify-center gap-4 text-white">
 
-      <h1 class="text-2xl font-semibold">Formiga Coffee</h1>
-      <p class="text-sm text-gray-200">Abra uma conta</p>
+      <div class="mb-2">
+        <h1 class="text-3xl font-bold tracking-tight">Formiga Coffee</h1>
+        <p class="text-sm text-gray-300">Abra uma conta e aproveite.</p>
+      </div>
 
-      <input type="text" placeholder="Nome Completo"
-        class="p-2 rounded bg-white/80 text-black outline-none">
+      <div class="flex flex-col gap-3">
+        <input type="text" placeholder="Nome Completo"
+          class="p-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder-gray-400 outline-none focus:bg-white/20 transition-all">
 
-      <input type="text" placeholder="Nº Telefone"
-        class="p-2 rounded bg-white/80 text-black outline-none">
+        <input type="text" placeholder="Nº Telefone"
+          class="p-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder-gray-400 outline-none focus:bg-white/20 transition-all">
 
-      <input type="text" placeholder="CPF"
-        class="p-2 rounded bg-white/80 text-black outline-none">
+        <input type="text" placeholder="CPF"
+          class="p-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder-gray-400 outline-none focus:bg-white/20 transition-all">
 
-      <input type="email" placeholder="email@dominio.com"
-        class="p-2 rounded bg-white/80 text-black outline-none">
+        <input type="email" placeholder="email@dominio.com"
+          class="p-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder-gray-400 outline-none focus:bg-white/20 transition-all">
 
-      <input type="password" placeholder="crie uma senha"
-        class="p-2 rounded bg-white/80 text-black outline-none">
+        <input type="password" placeholder="crie uma senha"
+          class="p-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder-gray-400 outline-none focus:bg-white/20 transition-all">
+      </div>
 
-      <button class="bg-red-900 hover:bg-red-800 p-2 rounded">
+      <button class="bg-[#5c1a1a] hover:bg-[#7a2424] p-3 rounded-xl font-semibold shadow-lg transition-all active:scale-95 mt-2">
         Criar conta
       </button>
 
-      <p class="text-center text-sm text-gray-300">ou continue com</p>
-
-      <button class="bg-white text-black p-2 rounded flex items-center justify-center gap-2">
-        <img src="https://cdn-icons-png.flaticon.com/512/281/281764.png" class="w-5">
-        Cadastrar pelo Google
-      </button>
-
-    </div>
-
-  </div>
-
-</body>
-</html>
+      <p class="text-
