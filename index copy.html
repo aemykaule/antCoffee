@@ -10,138 +10,157 @@
 </head>
 
 <body>
-  <!-- Include this script tag or install `@tailwindplus/elements` via npm: -->
-  <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script> -->
-  <nav
-    class="relativeafter:pointer-events-none after:absolute after:inset-x-0 after:bottom-0 after:h-px after:bg-white/10">
-    <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-      <div class="relative flex h-16 items-center justify-between">
-        <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
-          <!-- Mobile menu button-->
-          <button type="button" command="--toggle" commandfor="mobile-menu"
-            class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-white/5 hover:text-white focus:outline-2 focus:-outline-offset-1 focus:outline-indigo-500">
-            <span class="absolute -inset-0.5"></span>
-            <span class="sr-only">Open main menu</span>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon"
-              aria-hidden="true" class="size-6 in-aria-expanded:hidden">
-              <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon"
-              aria-hidden="true" class="size-6 not-in-aria-expanded:hidden">
-              <path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-          </button>
-        </div>
-        <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-          <div class="flex shrink-0 items-center">
-            <img src="./img/logo_transparente 2.png" alt="Your Company" class="h-8 w-auto sm:hidden" />
-          </div>
-          <div class="hidden sm:ml-6 sm:block bg-rose-950 rounded-md">
-            <div class="flex space-x-4">
-              <!-- Current: "bg-gray-950/50 text-white", Default: "text-gray-300 hover:bg-white/5 hover:text-white" -->
-              <a href="#" aria-current="page" class="rounded-md bg-white px-3 py-2 text-sm font-medium">Início</a>
-              <a href="#"
-                class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">Cardápio</a>
-              <a href="#"
-                class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">Usuário</a>
-            </div>
-          </div>
-        </div>
-        <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+  <div class="flex w-full min-h-screen">
+    <!-- Sidebar Navigation -->
+    <nav id="mobile-menu"
+      class="fixed sm:relative top-0 left-0 h-screen sm:h-screen w-64 sm:w-48 z-40 hidden sm:flex flex-col sm:flex-shrink-0 border-r border-gray-700">
 
-          <div class="bg-rose-950 rounded-md flex">
-            <a href="#"
-              class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white flex"><span
-                class="mr-2">
-              </span>
-              Buscar</a>
-            <button type="button"
-              class="relative rounded-full p-1 text-gray-400 hover:text-white focus:outline-2 focus:outline-offset-2 focus:outline-indigo-500">
-              <span class="absolute -inset-1.5"></span>
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                stroke="currentColor" class="size-6">
-                <path stroke-linecap="round" stroke-linejoin="round"
-                  d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
-              </svg>
+      <!-- Mobile Close Button -->
+      <button type="button" data-mobile-menu-close aria-controls="mobile-menu"
+        class="absolute top-4 right-4 sm:hidden text-gray-400 hover:text-white">
+        <svg id="mobile-menu-close-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+          class="size-6">
+          <path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </button>
 
-            </button>
-          </div>
-
-          <!-- Profile dropdown -->
-          <el-dropdown class="relative ml-3">
-            <button
-              class="relative flex rounded-full focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">
-              <span class="absolute -inset-1.5"></span>
-              <span class="sr-only">Open user menu</span>
-            </button>
-
-            <el-menu anchor="bottom end" popover
-              class="w-48 origin-top-right rounded-md bg-gray-800 py-1 outline -outline-offset-1 outline-white/10 transition transition-discrete [--anchor-gap:--spacing(2)] data-closed:scale-95 data-closed:transform data-closed:opacity-0 data-enter:duration-100 data-enter:ease-out data-leave:duration-75 data-leave:ease-in">
-              <a href="#" class="block px-4 py-2 text-sm text-gray-300 focus:bg-white/5 focus:outline-hidden">Your
-                profile</a>
-              <a href="#"
-                class="block px-4 py-2 text-sm text-gray-300 focus:bg-white/5 focus:outline-hidden">Settings</a>
-              <a href="#" class="block px-4 py-2 text-sm text-gray-300 focus:bg-white/5 focus:outline-hidden">Sign
-                out</a>
-            </el-menu>
-          </el-dropdown>
-        </div>
+      <!-- Logo -->
+      <div class="flex shrink-0 items-center justify-center sm:px-4 sm:py-6 mt-8 sm:mt-0">
+        <img src="./img/logo_transparente 2.png" alt="antCoffee" class="h-12 w-auto" />
       </div>
-    </div>
 
-    <el-disclosure id="mobile-menu" hidden class="block sm:hidden">
-      <div class="space-y-1 px-2 pt-2 pb-3">
-        <!-- Current: "bg-gray-950/50 text-white", Default: "text-gray-300 hover:bg-white/5 hover:text-white" -->
-        <a href="#" aria-current="page"
-          class="block rounded-md bg-gray-950/50 px-3 py-2 text-base font-medium text-white flex"><span
-            class="mr-2"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-              stroke="currentColor" class="size-6">
+      <!-- Menu Items -->
+      <div class="flex-1 px-4 py-6">
+        <div class="space-y-3">
+          <a href="#"
+            class="block rounded-md px-3 py-2 text-sm font-medium text-gray-400 hover:bg-white/5 hover:text-white flex items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor" class="size-5 mr-3">
               <path stroke-linecap="round" stroke-linejoin="round"
                 d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
             </svg>
-          </span> Início</a>
-        <a href="#"
-          class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white flex"><span
-            class="mr-2"></span>
-          Cafés</a>
-        <a href="#"
-          class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white flex"><span
-            class="mr-2"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-              stroke="currentColor" class="size-6">
+            Início
+          </a>
+          <a href="#"
+            class="block rounded-md px-3 py-2 text-sm font-medium text-gray-400 hover:bg-white/5 hover:text-white flex items-center">
+            <span class="material-symbols-outlined mr-3 text-lg">local_cafe</span>
+            Cafés
+          </a>
+          <a href="#"
+            class="block rounded-md px-3 py-2 text-sm font-medium text-gray-400 hover:bg-white/5 hover:text-white flex items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor" class="size-5 mr-3">
               <path stroke-linecap="round" stroke-linejoin="round"
-                d="M12 8.25v-1.5m0 1.5c-1.355 0-2.697.056-4.024.166C6.845 8.51 6 9.473 6 10.608v2.513m6-4.871c1.355 0 2.697.056 4.024.166C17.155 8.51 18 9.473 18 10.608v2.513M15 8.25v-1.5m-6 1.5v-1.5m12 9.75-1.5.75a3.354 3.354 0 0 1-3 0 3.354 3.354 0 0 0-3 0 3.354 3.354 0 0 1-3 0 3.354 3.354 0 0 0-3 0 3.354 3.354 0 0 1-3 0L3 16.5m15-3.379a48.474 48.474 0 0 0-6-.371c-2.032 0-4.034.126-6 .371m12 0c.39.049.777.102 1.163.16 1.07.16 1.837 1.094 1.837 2.175v5.169c0 .621-.504 1.125-1.125 1.125H4.125A1.125 1.125 0 0 1 3 20.625v-5.17c0-1.08.768-2.014 1.837-2.174A47.78 47.78 0 0 1 6 13.12M12.265 3.11a.375.375 0 1 1-.53 0L12 2.845l.265.265Zm-3 0a.375.375 0 1 1-.53 0L9 2.845l.265.265Zm6 0a.375.375 0 1 1-.53 0L15 2.845l.265.265Z" />
+                d="M12 8.25v-1.5m0 1.5c-1.355 0-2.697.056-4.024.166C6.845 8.51 6 9.473 6 10.608v2.513m6-4.871c1.355 0 2.697.056 4.024.166C17.155 8.51 18 9.473 18 10.608v2.513M15 8.25v-1.5m-6 1.5v-1.5m12 9.75-1.5.75a3.354 3.354 0 0 1-3 0 3.354 3.354 0 0 0-3 0 3.354 3.354 0 0 1-3 0 3.354 3.354 0 0 0-3 0 3.354 3.354 0 0 1-3 0L3 16.5m15-3.379a48.474 48.474 0 0 0-6-.371c-2.032 0-4.034.126-6 .371m12 0c.39.049.777.102 1.163.16 1.07.16 1.837 1.094 1.837 2.175v5.169c0 .621-.504 1.125-1.125 1.125H4.125A1.125 1.125 0 0 1 3 20.625v-5.17c0-1.08.768-2.014 1.837-2.174A47.78 47.78 0 0 1 6 13.12M12.265 3.11a.375.375 0 1 1-.53 0L12 2.845l.265.265Zm-3 0 a.375.375 0 1 1-.53 0L9 2.845l.265.265Zm6 0 a.375.375 0 1 1-.53 0L15 2.845l.265.265Z" />
             </svg>
-          </span>
-          Bolos</a>
-        <a href="#"
-          class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white flex"><span
-            class="material-symbols-outlined mr-2">
-            cookie
-          </span>
-          Doces</a>
-        <a href="#"
-          class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white flex"><span
-            class="mr-2"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-              stroke="currentColor" class="size-6">
-              <path stroke-linecap="round" stroke-linejoin="round"
-                d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
-            </svg>
-          </span>
-          Sua Conta</a>
-        <a href="#"
-          class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white flex"><span
-            class="mr-2"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-              stroke="currentColor" class="size-6">
-              <path stroke-linecap="round" stroke-linejoin="round"
-                d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
-            </svg>
-          </span>
-          Seu Carrinho</a>
+            Bolos
+          </a>
+          <a href="#"
+            class="block rounded-md px-3 py-2 text-sm font-medium text-gray-400 hover:bg-white/5 hover:text-white flex items-center">
+            <span class="material-symbols-outlined mr-3 text-lg">cookie</span>
+            Doces
+          </a>
+        </div>
       </div>
-    </el-disclosure>
-  </nav>
 
-  <script src=""></script>
+      <!-- Bottom Menu Items -->
+      <div class=" border-gray-700 px-4 py-6 space-y-3">
+        <p class="px-2 text-gray-400 hover:bg-white/5">Usuário</p>
+        <a href="#"
+          class="block rounded-md px-3 py-2 text-sm font-medium text-gray-400 hover:bg-white/5 hover:text-white flex items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="size-5 mr-3">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+          </svg>
+          Sua Conta
+        </a>
+        <a href="#"
+          class="block rounded-md px-3 py-2 text-sm font-medium text-gray-400 hover:bg-white/5 hover:text-white flex items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="size-5 mr-3">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+          </svg>
+          Seu Carrinho
+        </a>
+      </div>
+    </nav>
+
+    <!-- Mobile Header with Toggle Button -->
+    <div class="sm:hidden fixed top-0 left-0 right-0 bg-gray-950 z-50 px-4 py-3 flex items-center justify-between">
+      <button type="button" data-mobile-menu-button aria-controls="mobile-menu" aria-expanded="false"
+        class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400">
+        <svg id="mobile-menu-open-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+          class="size-6">
+          <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </button>
+      <img src="./img/logo_transparente 2.png" alt="antCoffee" class="h-8 w-auto" />
+      <div class="w-10"></div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="pt-16 sm:pt-0 sm:ml-0 flex-1 w-full sm:w-auto">
+      <!-- Search Bar for Mobile -->
+      <div class="sm:hidden bg-gray-950 px-4 py-3">
+        <div class="bg-rose-950 rounded-md flex">
+          <input type="text" placeholder="Buscar..."
+            class="flex-1 bg-transparent px-3 py-2 text-sm text-gray-400 placeholder-gray-400 focus:outline-none" />
+          <button type="button" class="p-2 text-gray-400 hover:text-white">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor" class="size-5">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Category Buttons -->
+      <div class="sm:hidden bg-gray-900 px-4 py-4">
+        <div class="flex gap-2 flex-wrap">
+          <button class="flex-1 bg-rose-950 hover:bg-rose-900 text-white px-3 py-2 rounded-md text-sm font-medium">Cafés
+            e Bebidas</button>
+          <button class="flex-1 bg-rose-950 hover:bg-rose-900 text-white px-3 py-2 rounded-md text-sm font-medium">Bolos
+            e Tortas</button>
+          <button
+            class="flex-1 bg-rose-950 hover:bg-rose-900 text-white px-3 py-2 rounded-md text-sm font-medium">Doces</button>
+        </div>
+      </div>
+
+      <!-- Desktop Header -->
+      <div class="hidden sm:flex items-center justify-between px-6 py-4 h-16">
+        <div class="flex-1">
+          <div class="flex gap-2 flex-wrap">
+            <div class="bg-rose-950 hover:bg-rose-900 rounded-md px-2">
+              <button
+                class="flex-1 bg-white text-black px-3 py-1 rounded-md text-sm font-medium">Home</button>
+              <button
+                class="flex-1 text-white px-3 py-2 rounded-md text-sm font-medium">Cardápio</button>
+              <button
+                class="flex-1 bg-rose-950 hover:bg-rose-900 text-white px-3 py-2 rounded-md text-sm font-medium">Usuário</button>
+            </div>
+          </div>
+        </div>
+        <div class="flex items-center gap-4">
+          <div class="bg-rose-950 rounded-md flex items-center">
+            <input type="text" placeholder="Buscar..."
+              class="bg-transparent px-3 py-2 text-sm text-gray-400 placeholder-gray-400 focus:outline-none" />
+            <button type="button" class="p-2 text-gray-400 hover:text-white">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="size-5">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="./src/js/menu.js"></script>
 </body>
 
 </html>
