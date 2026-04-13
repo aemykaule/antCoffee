@@ -13,7 +13,7 @@
   <div class="flex w-full min-h-screen">
     <!-- Sidebar Navigation -->
     <nav id="mobile-menu"
-      class="fixed sm:relative top-0 left-0 h-screen sm:h-screen w-64 sm:w-48 z-40 hidden sm:flex flex-col sm:flex-shrink-0 border-r border-gray-700 bg-white/5">
+      class="relative top-0 left-0 h-screen sm:h-screen w-64 sm:w-48 z-40 hidden sm:flex flex-col sm:flex-shrink-0 border-r border-gray-700 bg-white/5 ">
 
       <!-- Mobile Close Button -->
       <button type="button" data-mobile-menu-close aria-controls="mobile-menu"
@@ -25,13 +25,16 @@
       </button>
 
       <!-- Logo -->
-      <div class="flex shrink-0 items-center justify-center sm:px-4 sm:py-6 mt-8 sm:mt-0">
+      <div class="flex items-center justify-center sm:px-4 sm:py-6 lg:hidden sm:mt-0">
         <img src="./img/logo_transparente 2.png" alt="antCoffee" class="h-12 w-auto" />
       </div>
 
       <!-- Menu Items -->
       <div class="flex-1 px-4 py-6">
-        <div class="space-y-3">
+        <div class="flex items-center justify-center sm:px-4 sm:py-6 sm:hidden sm:mt-0">
+          <img src="./img/logo_transparente 2.png" alt="antCoffee" class="h-12 w-auto" />
+        </div>
+        <div class="space-y-3 ">
           <a href="#"
             class="block rounded-md px-3 py-2 text-sm font-medium text-gray-400 hover:text-black flex items-center">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -88,7 +91,7 @@
     </nav>
 
     <!-- Mobile Header with Toggle Button -->
-    <div class="sm:hidden fixed top-0 left-0 right-0 bg-gray-950 z-50 px-4 py-3 flex items-center justify-between">
+    <div class="sm:hidden fixed top-0 left-0 right-0 bg-white z-50 px-4 py-3 flex items-center justify-between ">
       <button type="button" data-mobile-menu-button aria-controls="mobile-menu" aria-expanded="false"
         class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400">
         <svg id="mobile-menu-open-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
@@ -97,35 +100,24 @@
         </svg>
       </button>
       <img src="./img/logo_transparente 2.png" alt="antCoffee" class="h-8 w-auto" />
-      <div class="w-10"></div>
+      <button type="button" class="p-2 text-gray-400 hover:text-white">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="size-5">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+        </svg>
+      </button>
     </div>
 
     <!-- Main Content -->
     <main class="pt-16 sm:pt-0 sm:ml-0 flex-1 w-full sm:w-auto">
-      <!-- Search Bar for Mobile -->
-      <div class="sm:hidden bg-gray-950 px-4 py-3">
-        <div class="bg-rose-950 rounded-md flex">
-          <input type="text" placeholder="Buscar..."
-            class="flex-1 bg-transparent px-3 py-2 text-sm text-gray-400 placeholder-gray-400 focus:outline-none" />
-          <button type="button" class="p-2 text-gray-400 hover:text-white">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-              stroke="currentColor" class="size-5">
-              <path stroke-linecap="round" stroke-linejoin="round"
-                d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
-            </svg>
-          </button>
-        </div>
-      </div>
 
       <!-- Mobile Category Buttons -->
-      <div class="sm:hidden bg-gray-900 px-4 py-4">
+      <div class="sm:hidden bg-rose-950 px-1 py-1 mr-8 ml-8 rounded-md">
         <div class="flex gap-2 flex-wrap">
-          <button class="flex-1 bg-rose-950 hover:bg-rose-900 text-white px-3 py-2 rounded-md text-sm font-medium">Cafés
-            e Bebidas</button>
-          <button class="flex-1 bg-rose-950 hover:bg-rose-900 text-white px-3 py-2 rounded-md text-sm font-medium">Bolos
-            e Tortas</button>
-          <button
-            class="flex-1 bg-rose-950 hover:bg-rose-900 text-white px-3 py-2 rounded-md text-sm font-medium">Doces</button>
+          <button class="flex-1 bg-white text-black px-3 py-2 rounded-md text-sm font-medium">Início</button>
+          <button class="flex-1 text-white px-3 py-2 rounded-md text-sm font-medium">Cardápio</button>
+          <button class="flex-1 text-white px-3 py-2 rounded-md text-sm font-medium">Usuário</button>
         </div>
       </div>
 
@@ -133,13 +125,10 @@
       <div class="hidden sm:flex items-center justify-between px-6 py-4 h-16">
         <div class="flex-1">
           <div class="flex gap-2 flex-wrap">
-            <div class="bg-rose-950 hover:bg-rose-900 rounded-md px-2">
-              <button
-                class="flex-1 bg-white text-black px-3 py-1 rounded-md text-sm font-medium">Home</button>
-              <button
-                class="flex-1 text-white px-3 py-2 rounded-md text-sm font-medium">Cardápio</button>
-              <button
-                class="flex-1 bg-rose-950 hover:bg-rose-900 text-white px-3 py-2 rounded-md text-sm font-medium">Usuário</button>
+            <div class="bg-rose-950 rounded-md px-2">
+              <button class="flex-1 bg-white text-black px-3 py-1 rounded-md text-sm font-medium">Início</button>
+              <button class="flex-1 text-white px-3 py-2 rounded-md text-sm font-medium">Cardápio</button>
+              <button class="flex-1 text-white px-3 py-2 rounded-md text-sm font-medium">Usuário</button>
             </div>
           </div>
         </div>
