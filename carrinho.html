@@ -30,76 +30,86 @@
         <div class="flex flex-col lg:flex-row justify-between items-start gap-6 w-full">
 
             <!-- CARD INFO -->
-            <div class="border border-[#c9a3a3] rounded-xl p-4 sm:p-6 mb-6 bg-white/70 flex-1 w-full">
+            <div class="border border-[#c9a3a3] bg-[#D9D9D9] rounded-xl p-4 sm:p-6 mb-6 bg-white-900 flex-1 w-full  shadow-xl">
 
                 <!-- ITEM 1 -->
-                <div class="flex flex-col sm:flex-row sm:items-center items-center text-center sm:text-left gap-4 mb-6">
-                    <img src="./img/cafeGelado.png" alt="Café Gelado" class="w-24 h-24 object-cover rounded-lg" />
-                    <div class="flex-1">
+                <div class="flex items-start gap-4 mb-6">
+                    <img src="./img/cafeGelado.png" alt="Café Gelado"
+                        class="w-24 h-24 object-cover rounded-lg shadow-md shadow-gray-900" />
+
+                    <div class="flex flex-col gap-2">
                         <span class="font-medium block">Café Gelado</span>
                         <p>R$ 16,90</p>
-                    </div>
 
-                    <div class="flex items-center gap-2">
-                        <button id="decrement1" class="bg-[#5a0f14] text-white px-3 py-1 rounded transition">
-                            -
-                        </button>
-                        <input id="quantity1" type="text" value="1" readonly
-                            class="w-12 text-center border border-gray-300 rounded" />
-                        <button id="increment1" class="bg-[#5a0f14] text-white px-3 py-1 rounded transition">
-                            +
-                        </button>
+                        <div class="flex items-center gap-2">
+                            <button id="decrement1" class="bg-[#5a0f14] text-white px-3 py-1 rounded transition">
+                                -
+                            </button>
+
+                            <input id="quantity1" type="text" value="1" readonly
+                                class="w-12 text-center border border-gray-300 rounded" />
+
+                            <button id="increment1" class="bg-[#5a0f14] text-white px-3 py-1 rounded transition">
+                                +
+                            </button>
+                        </div>
                     </div>
                 </div>
 
                 <!-- ITEM 2 -->
-                <div class="flex flex-col sm:flex-row sm:items-center items-center text-center sm:text-left gap-4 mb-6">
-                    <img src="./img/boloMorango.png" alt="Bolo de Morango" class="w-24 h-24 object-cover rounded-lg" />
+                <div class="flex items-start gap-4 mb-6">
+                    <img src="./img/boloMorango.png" alt="Bolo de Morango"
+                        class="w-24 h-24 object-cover rounded-lg shadow-md shadow-gray-900" />
 
-                    <div class="flex-1">
-                        <span class="font-medium block">Bolo de Morango</span>
+                    <div class="flex flex-col gap-2">
+                        <span class="font-medium">Bolo de Morango</span>
                         <p>R$ 24,90</p>
-                    </div>
 
-                    <div class="flex items-center gap-2">
-                        <button id="decrement2" class="bg-[#5a0f14] text-white px-3 py-1 rounded transition">
-                            -
-                        </button>
-                        <input id="quantity2" type="text" value="1" readonly
-                            class="w-12 text-center border border-gray-300 rounded" />
-                        <button id="increment2" class="bg-[#5a0f14] text-white px-3 py-1 rounded transition">
-                            +
-                        </button>
+                        <div class="flex items-center gap-2">
+                            <button id="decrement2" class="bg-[#5a0f14] text-white px-3 py-1 rounded transition">
+                                -
+                            </button>
+
+                            <input id="quantity2" type="text" value="1" readonly
+                                class="w-12 text-center border border-gray-300 rounded" />
+
+                            <button id="increment2" class="bg-[#5a0f14] text-white px-3 py-1 rounded transition">
+                                +
+                            </button>
+                        </div>
                     </div>
                 </div>
 
                 <!-- ITEM 3 -->
-                <div class="flex flex-col sm:flex-row sm:items-center gap-4 mb-6">
-                    <img src="./img/boloChoco.png" alt="Bolo de Chocolate" class="w-24 h-24 object-cover rounded-lg" />
+                <div class="flex items-start gap-4 mb-6">
+                    <img src="./img/boloChoco.png" alt="Bolo de Chocolate"
+                        class="w-24 h-24 object-cover rounded-lg shadow-md shadow-gray-900" />
 
-                    <div class="flex-1">
-                        <span class="font-medium block">Bolo de Chocolate</span>
+                    <div class="flex flex-col gap-2">
+                        <span class="font-medium">Bolo de Chocolate</span>
                         <p>R$ 29,90</p>
-                    </div>
 
-                    <div class="flex items-center gap-2">
-                        <button id="decrement3" class="bg-[#5a0f14] text-white px-3 py-1 rounded transition">
-                            -
-                        </button>
-                        <input id="quantity3" type="text" value="1" readonly
-                            class="w-12 text-center border border-gray-300 rounded" />
-                        <button id="increment3" class="bg-[#5a0f14] text-white px-3 py-1 rounded transition">
-                            +
-                        </button>
+                        <div class="flex items-center gap-2">
+                            <button id="decrement3" class="bg-[#5a0f14] text-white px-3 py-1 rounded transition">
+                                -
+                            </button>
+
+                            <input id="quantity3" type="text" value="1" readonly
+                                class="w-12 text-center border border-gray-300 rounded" />
+
+                            <button id="increment3" class="bg-[#5a0f14] text-white px-3 py-1 rounded transition">
+                                +
+                            </button>
+                        </div>
                     </div>
                 </div>
-
                 <!-- TOTAL + SALVAR -->
-                <div class="flex flex-col sm:flex-row justify-end gap-3 mt-6">
-                    <button class="bg-[#5a0f14] text-white px-4 py-2 rounded w-full sm:w-24">
+                <div class="flex flex-row sm:flex-row items-center justify-end gap-3 mt-6">
+                    <button class="bg-[#5a0f14] text-white px-4 py-2 rounded w-20 sm:w-24 hover:bg-rose-900">
                         71,70
                     </button>
-                    <button class="bg-[#5a0f14] text-white px-4 py-2 rounded w-full sm:w-24">
+
+                    <button class="bg-[#5a0f14] text-white px-4 py-2 rounded w-20 sm:w-24 hover:bg-rose-900">
                         Salvar
                     </button>
                 </div>
@@ -107,7 +117,7 @@
 
             <!-- CARD PAGAMENTO -->
             <div
-                class="border border-[#c9a3a3] bg-[#d9d9d9] rounded-xl p-4 sm:p-6 bg-white/70 w-full lg:max-w-sm self-start">
+                class="border border-[#c9a3a3] bg-[#d9d9d9] rounded-xl p-4 sm:p-6 w-full lg:max-w-sm self-start shadow-xl">
 
                 <div class="mb-4">
                     <h2 class="font-semibold mb-3">Detalhes de Pagamento</h2>
@@ -131,8 +141,7 @@
                 </div>
 
                 <button
-                    class="bg-[#5a0f14] text-white px-4 py-2 rounded w-full sm:w-auto flex items-center justify-center gap-2 mt-4">
-
+                    class="bg-[#5a0f14] text-white px-4 py-2 rounded w-full sm:w-auto flex items-center justify-center gap-2 mt-4 hover:bg-rose-900">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                         stroke="currentColor" class="size-6">
                         <path stroke-linecap="round" stroke-linejoin="round"
