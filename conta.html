@@ -5,20 +5,25 @@
     <meta charset="UTF-8" />
     <title>Sua Conta</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Material Icons -->
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 </head>
 
-<body class="flex h-screen bg-[#f4f1f1] text-gray-800">
-    <div class="w-64 bg-white border-r flex flex-col p-4">
+<body class="flex flex-col md:flex-row min-h-screen bg-[#f4f1f1] text-gray-800">
+
+    <!-- SIDEBAR -->
+    <div class="w-full md:w-64 bg-white border-b md:border-r flex flex-col p-4">
         <div class="flex items-center gap-2 mb-6">
             <div class="w-10 h-10 bg-black rounded-full"></div>
         </div>
 
         <nav class="flex flex-col gap-2 text-sm">
-            <button class="bg-[#5a0f14] text-white p-2 rounded flex items-center gap-2">
-                🏠 Início
-            </button>
+            <button class="bg-[#5a0f14] text-white p-2 rounded flex items-center gap-2">🏠 Início</button>
             <button class="p-2 flex items-center gap-2">☕ Cafés</button>
             <button class="p-2 flex items-center gap-2">🍰 Bolos</button>
             <button class="p-2 flex items-center gap-2">🍪 Doces</button>
@@ -30,13 +35,15 @@
             <button class="p-2 flex items-center gap-2">🛒 Seu carrinho</button>
         </div>
     </div>
+
     <!-- CONTEÚDO -->
-    <div class="flex-1 p-8 overflow-auto">
+    <div class="flex-1 p-4 md:p-8 overflow-visible">
+
         <!-- HEADER -->
-        <div class="flex justify-between items-center mb-6">
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-6">
             <div class="flex items-center gap-4">
-                <img src="/img/dogFone.png" class="w-20 h-20 rounded-full" />
-                <h1 class="text-2xl font-semibold text-3xl ">Dog Fone Azul</h1>
+                <img src="/img/dogFone.png" class="w-16 h-16 md:w-20 md:h-20 rounded-full" />
+                <h1 class="text-xl md:text-3xl font-semibold">Dog Fone Azul</h1>
             </div>
 
             <button class="bg-[#5a0f14] text-white px-5 py-2 rounded-md">
@@ -44,32 +51,32 @@
             </button>
         </div>
 
-        <!-- LINHA -->
         <div class="border-t mb-6"></div>
+
         <!-- CARDS -->
-        <div class="p-8">
+        <div class="p-2 md:p-8">
+
             <!-- CARD INFO -->
-            <div class="border border-[#c9a3a3] rounded-xl p-6 mb-6 bg-white/70">
+            <div class="border border-[#c9a3a3] rounded-xl p-4 md:p-6 mb-6 bg-white/70">
                 <div class="flex justify-between items-center mb-4">
-                    <h2 class="font-semibold text-2xl">Informações Pessoais</h2>
-                <button class="flex items-center gap-2 text-sm bg-gray-200 px-3 py-1 rounded-full">
-                    <span class="material-symbols-outlined">
-                        edit
-                    </span>
-                    <p>Edit</p>
-                </button>
+                    <h2 class="font-semibold text-xl md:text-2xl">Informações Pessoais</h2>
+
+                    <button class="flex items-center gap-2 text-sm bg-gray-200 px-3 py-1 rounded-full">
+                        <span class="material-symbols-outlined">edit</span>
+                        Edit
+                    </button>
                 </div>
 
-                <div class="grid grid-cols-2 gap-6">
-                    <input placeholder="Nome Completo" class="bg-gray-200 p-3 rounded-md outline-none w-[500px]" />
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
 
-                    <input placeholder="Telefone" class="bg-gray-200 p-3 rounded-md outline-none w-[500px]" />
+                    <input placeholder="Nome Completo" class="bg-gray-200 p-3 rounded-md w-full" />
+                    <input placeholder="Telefone" class="bg-gray-200 p-3 rounded-md w-full" />
 
-                    <input placeholder="CPF" class="bg-gray-200 p-3 rounded-md outline-none w-[500px]" />
+                    <input placeholder="CPF" class="bg-gray-200 p-3 rounded-md w-full" />
+                    <input placeholder="E-mail" class="bg-gray-200 p-3 rounded-md w-full" />
 
-                    <input placeholder="E-mail" class="bg-gray-200 p-3 rounded-md outline-none w-[500px]" />
-
-                    <input placeholder="Senha" class="bg-gray-200 p-3 rounded-md outline-none col-span-2 w-[500px]" />
+                    <input placeholder="Senha"
+                        class="bg-gray-200 p-3 rounded-md w-full md:col-span-2" />
                 </div>
 
                 <div class="flex justify-end mt-4">
@@ -80,37 +87,35 @@
             </div>
 
             <!-- CARD ENDEREÇO -->
-            <div class="border border-[#c9a3a3] rounded-xl p-6 mb-6 bg-white/70 w-3xs">
+            <div class="border border-[#c9a3a3] rounded-xl p-4 md:p-6 mb-6 bg-white/70">
                 <div class="flex justify-between items-center mb-4">
-                    <h2 class="font-semibold text-2xl">Endereço</h2>
-                <button class="flex items-center gap-2 text-sm bg-gray-200 px-3 py-1 rounded-full">
-                    <span class="material-symbols-outlined">
-                        edit
-                    </span>
-                    <p>Edit</p>
-                </button>
-            </div>
-                <div class="grid grid-cols-2 gap-6">
+                    <h2 class="font-semibold text-xl md:text-2xl">Endereço</h2>
+
+                    <button class="flex items-center gap-2 text-sm bg-gray-200 px-3 py-1 rounded-full">
+                        <span class="material-symbols-outlined">edit</span>
+                        Edit
+                    </button>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+
                     <!-- Estado + Cidade -->
-                    <div class="flex gap-4">
-                        <select class="bg-gray-200 p-3 rounded-md w-[243px]">
+                    <div class="flex flex-col md:flex-row gap-4 md:col-span-2">
+                        <select class="bg-gray-200 p-3 rounded-md w-full">
                             <option>Estado</option>
+                            <option>Paraná (PR)</option>
+                            <option>São Paulo (SP)</option>
+                            <option>Rio de Janeiro (RJ)</option>
                         </select>
 
-                        <select class="bg-gray-200 p-3 rounded-md w-[243px]">
-                            <option>Cidade</option>
-                        </select>
+                        <input placeholder="Cidade" class="bg-gray-200 p-3 rounded-md w-full" />
                     </div>
 
-                    <!-- Número -->
-                    <input placeholder="Número" class="bg-gray-200 p-3 rounded-md w-[500px]" />
+                    <input placeholder="Número" class="bg-gray-200 p-3 rounded-md w-full" />
+                    <input placeholder="Bairro" class="bg-gray-200 p-3 rounded-md w-full" />
 
-                    <!-- Endereço -->
-                    <input placeholder="Endereço" class="bg-gray-200 p-3 rounded-md w-[500px] col-span-1" />
-
-                    <!-- Bairro -->
-                    <input placeholder="Bairro" class="bg-gray-200 p-3 rounded-md w-[500px]" />
-
+                    <input placeholder="Endereço"
+                        class="bg-gray-200 p-3 rounded-md w-full md:col-span-2" />
                 </div>
 
                 <div class="flex justify-end mt-4">
@@ -119,45 +124,43 @@
                     </button>
                 </div>
             </div>
+
         </div>
 
-<!-- FOOTER -->
-<div class="mt-1 text-sm text-gray-500">
-    <div>
-        <!-- MENU -->
-        <p class="text-lg text-center">Home | Cardápio | Doces | Bolos | Cafés</p>
+        <!-- FOOTER -->
+        <div class="mt-6 text-sm text-gray-500">
+
+            <p class="text-center text-lg mb-4">
+                Home | Cardápio | Doces | Bolos | Cafés
+            </p>
+
+            <div class="flex flex-col md:flex-row items-center justify-between px-4 md:px-10 gap-4">
+
+                <!-- LOGO -->
+                <div class="flex items-center gap-2">
+                    <img src="./img/logo_transparente 2.png" class="w-[70px] md:w-[85px]" />
+                    <p class="text-sm">Formiga Coffee</p>
+                </div>
+
+                <!-- ÍCONES -->
+                <div class="grid grid-cols-3 gap-3 md:gap-4 text-[#5a0f14] text-lg md:text-2xl">
+                    <i class="fab fa-spotify"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-facebook"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-youtube"></i>
+                    <i class="fab fa-linkedin"></i>
+                </div>
+            </div>
+
+            <div class="flex justify-center mt-4">
+                <p>©2026 | Todos os direitos reservados.</p>
+            </div>
+
+        </div>
+
     </div>
 
-<div class="flex items-center justify-between px-10 mt-5">
-    <!-- LOGO -->
-    <div class="flex items-center gap-2">
-        <img src="./img/logo_transparente 2.png" class="w-[90px]" />
-        <p class="text-sm">Formiga Coffee</p>
-    </div>
-
-    <!-- ÍCONES -->
-    <div class="grid grid-cols-3 gap-4 text-[#5a0f14] text-3xl">
-
-        <i class="fab fa-spotify hover:scale-110 transition cursor-pointer"></i>
-        <i class="fab fa-instagram hover:scale-110 transition cursor-pointer"></i>
-        <i class="fab fa-facebook hover:scale-110 transition cursor-pointer"></i>
-
-        <i class="fab fa-twitter hover:scale-110 transition cursor-pointer"></i>
-        <i class="fab fa-youtube hover:scale-110 transition cursor-pointer"></i>
-        <i class="fab fa-linkedin hover:scale-110 transition cursor-pointer"></i>
-
-    </div>
-
-</div>
-    <!-- Texto -->
-    <div class="flex justify-center mt-5">
-        <p>©2026 | Todos os direitos reservados.</p>
-    </div>
-
-</div>
-
-
-</div>
 </body>
 
 </html>
