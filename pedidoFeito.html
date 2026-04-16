@@ -1,22 +1,53 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pedido Feito</title>
-    <link rel="stylesheet" href="./dist/styles.css">
-        <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <div class="flex flex-col items-center justify-center min-h-screen p-4">
-        <h2 class="text-lime-800 text-5xl">Seu Pedido Foi Realizado com Sucesso!</h2>
-        <p class="text-gray-600 mb-5 mt-5 text-xl">Obrigado pela preferência</p>
-        <button class="bg-[#5a0f14] text-white px-5 ms-2 py-2 rounded">
-                Voltar
-        </button>
+
+<body class="bg-[#efefef] overflow-hidden">
+
+    <div class="min-h-screen flex flex-col lg:flex-row items-center justify-center lg:justify-between px-6 lg:pl-12">
+
+        <!-- TEXTO -->
+        <div class="w-full lg:w-1/2 flex flex-col items-center lg:items-start text-center lg:text-left z-10">
+
+            <h2 class="text-green-800 font-bold text-4xl lg:text-6xl leading-tight max-w-xl">
+                Seu pedido foi realizado com sucesso!
+            </h2>
+
+            <p class="text-[#9a7a7a] text-xl lg:text-2xl mt-4 mb-6">
+                Obrigado pela preferência
+            </p>
+
+            <a href="./index copy.html">
+                <button class="bg-[#5a0f14] text-white px-8 py-3 rounded-md">
+                    Voltar
+                </button>
+            </a>
+        </div>
+
+        <!-- IMAGEM -->
+        <div class="w-full lg:w-1/2 flex justify-center lg:justify-end mt-10 lg:mt-0">
+
+            <img
+                src="./img/logo_transparente 2.png"
+                alt=""
+                class="
+                    w-[300px]
+                    opacity-20
+                    lg:opacity-20
+                    lg:w-[950px]
+                    lg:translate-x-60
+                    absolute
+                    lg:static
+                "
+            >
+        </div>
+
     </div>
-    <div class="">
-        <img class="w-100 h-100" src="./img/logo_transparente 2.png" alt="">
-    </div>
+
 </body>
 </html>
