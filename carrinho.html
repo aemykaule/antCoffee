@@ -8,210 +8,182 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body
-    class="font-display bg-background-light dark:bg-background-dark min-h-screen flex flex-col transition-colors duration-300">
+<body class="font-display bg-background-light min-h-screen flex flex-col">
 
-    <div class="bg-sky-50"></div>
-
-    <!-- CONTEÚDO -->
-    <div class="flex-1 p-4 sm:p-6 lg:p-8 overflow-auto">
+    <div class="flex-1 p-4 sm:p-6 lg:p-8">
 
         <!-- HEADER -->
         <div class="flex justify-between items-center mb-6">
             <button class="bg-[#5a0f14] text-white px-5 py-2 rounded-md">
                 Seu Carrinho
             </button>
+
+            <a href="index copy.html" class="text-[#5a0f14] underline">
+                ← Continuar comprando
+            </a>
         </div>
 
-        <!-- LINHA -->
         <div class="border-t mb-6 border-[#c9a3a3]"></div>
 
-        <!-- WRAPPER PRINCIPAL -->
-        <div class="flex flex-col lg:flex-row justify-between items-start gap-6 w-full">
+        <div class="flex flex-col lg:flex-row gap-6">
 
-            <!-- CARD INFO -->
-            <div class="border border-[#c9a3a3] bg-[#D9D9D9] rounded-xl p-4 sm:p-6 mb-6 bg-white-900 flex-1 w-full  shadow-xl">
+            <!-- CARD PRODUTOS -->
+            <div class="border border-[#c9a3a3] bg-[#D9D9D9] rounded-xl p-6 flex-1 shadow-xl">
 
-                <!-- ITEM 1 -->
-                <div class="flex items-start gap-4 mb-6">
-                    <img src="./img/cafeGelado.png" alt="Café Gelado"
-                        class="w-24 h-24 object-cover rounded-lg shadow-md shadow-gray-900" />
+                <!-- ITEM -->
+                <div class="item flex items-start gap-4 mb-6">
+                    <img src="./img/cafeGelado.png" class="w-24 h-24 rounded-lg">
 
                     <div class="flex flex-col gap-2">
-                        <span class="font-medium block">Café Gelado</span>
-                        <p>R$ 16,90</p>
+                        <span>Café Gelado</span>
+                        <p class="price" data-price="16.90">R$ 16,90</p>
 
-                        <div class="flex items-center gap-2">
-                            <button id="decrement1" class="bg-[#5a0f14] text-white px-3 py-1 rounded transition">
-                                -
-                            </button>
-
-                            <input id="quantity1" type="text" value="1" readonly
-                                class="w-12 text-center border border-gray-300 rounded" />
-
-                            <button id="increment1" class="bg-[#5a0f14] text-white px-3 py-1 rounded transition">
-                                +
-                            </button>
+                        <div class="flex gap-2">
+                            <button class="decrement bg-[#5a0f14] text-white px-3">-</button>
+                            <input type="text" value="1" class="qty w-12 text-center border">
+                            <button class="increment bg-[#5a0f14] text-white px-3">+</button>
                         </div>
+
+                        <button class="remove-btn text-red-600 text-sm">Remover</button>
                     </div>
                 </div>
 
-                <!-- ITEM 2 -->
-                <div class="flex items-start gap-4 mb-6">
-                    <img src="./img/boloMorango.png" alt="Bolo de Morango"
-                        class="w-24 h-24 object-cover rounded-lg shadow-md shadow-gray-900" />
+                <!-- ITEM -->
+                <div class="item flex items-start gap-4 mb-6">
+                    <img src="./img/boloMorango.png" class="w-24 h-24 rounded-lg">
 
                     <div class="flex flex-col gap-2">
-                        <span class="font-medium">Bolo de Morango</span>
-                        <p>R$ 24,90</p>
+                        <span>Bolo de Morango</span>
+                        <p class="price" data-price="24.90">R$ 24,90</p>
 
-                        <div class="flex items-center gap-2">
-                            <button id="decrement2" class="bg-[#5a0f14] text-white px-3 py-1 rounded transition">
-                                -
-                            </button>
-
-                            <input id="quantity2" type="text" value="1" readonly
-                                class="w-12 text-center border border-gray-300 rounded" />
-
-                            <button id="increment2" class="bg-[#5a0f14] text-white px-3 py-1 rounded transition">
-                                +
-                            </button>
+                        <div class="flex gap-2">
+                            <button class="decrement bg-[#5a0f14] text-white px-3">-</button>
+                            <input type="text" value="1" class="qty w-12 text-center border">
+                            <button class="increment bg-[#5a0f14] text-white px-3">+</button>
                         </div>
+
+                        <button class="remove-btn text-red-600 text-sm">Remover</button>
                     </div>
                 </div>
 
-                <!-- ITEM 3 -->
-                <div class="flex items-start gap-4 mb-6">
-                    <img src="./img/boloChoco.png" alt="Bolo de Chocolate"
-                        class="w-24 h-24 object-cover rounded-lg shadow-md shadow-gray-900" />
+                <!-- ITEM -->
+                <div class="item flex items-start gap-4 mb-6">
+                    <img src="./img/boloChoco.png" class="w-24 h-24 rounded-lg">
 
                     <div class="flex flex-col gap-2">
-                        <span class="font-medium">Bolo de Chocolate</span>
-                        <p>R$ 29,90</p>
+                        <span>Bolo de Chocolate</span>
+                        <p class="price" data-price="29.90">R$ 29,90</p>
 
-                        <div class="flex items-center gap-2">
-                            <button id="decrement3" class="bg-[#5a0f14] text-white px-3 py-1 rounded transition">
-                                -
-                            </button>
-
-                            <input id="quantity3" type="text" value="1" readonly
-                                class="w-12 text-center border border-gray-300 rounded" />
-
-                            <button id="increment3" class="bg-[#5a0f14] text-white px-3 py-1 rounded transition">
-                                +
-                            </button>
+                        <div class="flex gap-2">
+                            <button class="decrement bg-[#5a0f14] text-white px-3">-</button>
+                            <input type="text" value="1" class="qty w-12 text-center border">
+                            <button class="increment bg-[#5a0f14] text-white px-3">+</button>
                         </div>
+
+                        <button class="remove-btn text-red-600 text-sm">Remover</button>
                     </div>
                 </div>
-                <!-- TOTAL + SALVAR -->
-                <div class="flex flex-row sm:flex-row items-center justify-end gap-3 mt-6">
-                    <button class="bg-[#5a0f14] text-white px-4 py-2 rounded w-20 sm:w-24 hover:bg-rose-900">
-                        71,70
-                    </button>
 
-                    <button class="bg-[#5a0f14] text-white px-4 py-2 rounded w-20 sm:w-24 hover:bg-rose-900">
-                        Salvar
-                    </button>
+                <!-- TOTAL -->
+                <div class="text-right mt-6">
+                    <p>Subtotal: R$ <span id="subtotal">0.00</span></p>
+                    <p>Frete: R$ <span id="frete">0.00</span></p>
+                    <p class="font-bold">Total: R$ <span id="total">0.00</span></p>
                 </div>
+
             </div>
 
-            <!-- CARD PAGAMENTO -->
-            <div
-                class="border border-[#c9a3a3] bg-[#d9d9d9] rounded-xl p-4 sm:p-6 w-full lg:max-w-sm self-start shadow-xl">
+            <!-- PAGAMENTO -->
+            <div class="border border-[#c9a3a3] bg-[#d9d9d9] rounded-xl p-6 w-full lg:max-w-sm shadow-xl">
 
-                <div class="mb-4">
-                    <h2 class="font-semibold mb-3">Detalhes de Pagamento</h2>
+                <h2 class="font-semibold mb-3">Detalhes de Pagamento</h2>
 
-                    <div class="flex flex-col sm:flex-row mb-2">
-                        <p class="text-gray-600">Nome:</p>
-                        <p class="text-gray-950 sm:ms-2">Shakira Shakira</p>
-                    </div>
+                <input id="nome" placeholder="Nome" class="border p-2 rounded w-full mb-2">
+                <input id="telefone" placeholder="Telefone" class="border p-2 rounded w-full mb-2">
+                <input id="cep" placeholder="CEP" class="border p-2 rounded w-full mb-2">
 
-                    <div class="flex flex-col sm:flex-row mb-2">
-                        <p class="text-gray-600">Telefone:</p>
-                        <p class="text-gray-950 sm:ms-2">41 91234-5678</p>
-                    </div>
-
-                    <div class="flex flex-col sm:flex-row">
-                        <p class="text-gray-600">Endereço:</p>
-                        <p class="text-gray-950 sm:ms-2 break-words">
-                            Rua Doutor José Pinto Rebelo Junior, 91 - Centro, Matinhos - PR, 83260-000
-                        </p>
-                    </div>
-                </div>
-
-                <button
-                    class="bg-[#5a0f14] text-white px-4 py-2 rounded w-full sm:w-auto flex items-center justify-center gap-2 mt-4 hover:bg-rose-900">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                        stroke="currentColor" class="size-6">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                            d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L6.832 19.82a4.5 4.5 0 0 1-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 0 1 1.13-1.897L16.863 4.487Zm0 0L19.5 7.125" />
-                    </svg>
-
-                    <p>Pagar</p>
+                <button id="calcFrete" class="bg-[#5a0f14] text-white w-full py-2 rounded mb-3">
+                    Calcular Frete
                 </button>
+
+                <select id="pagamento" class="border p-2 rounded w-full mb-3">
+                    <option>Cartão</option>
+                    <option>Pix</option>
+                    <option>Boleto</option>
+                </select>
+                <a href="pedidoFeito.html">
+                    <button class="bg-[#5a0f14] text-white w-full py-2 rounded">
+                        Pagar
+                    </button>
+                </a>
+
             </div>
+
         </div>
 
-        <!-- FOOTER -->
-        <div class="mt-10 text-center text-sm text-gray-500">
-            <p>Home | Cardápio | Doces | Bolos | Cafés</p>
-            <p class="mt-2">© 2026 | Todos os direitos reservados.</p>
-        </div>
     </div>
 
     <script>
-        // Item 1
-        const decrementBtn1 = document.getElementById('decrement1');
-        const incrementBtn1 = document.getElementById('increment1');
-        const quantityInput1 = document.getElementById('quantity1');
+        function atualizarTotal() {
+            let subtotal = 0;
 
-        decrementBtn1.addEventListener('click', () => {
-            let currentValue = parseInt(quantityInput1.value);
-            if (currentValue > 1) {
-                quantityInput1.value = currentValue - 1;
+            document.querySelectorAll('.item').forEach(item => {
+                const price = parseFloat(item.querySelector('.price').dataset.price);
+                const qty = parseInt(item.querySelector('.qty').value);
+                subtotal += price * qty;
+            });
+
+            const frete = parseFloat(document.getElementById('frete').textContent) || 0;
+
+            document.getElementById('subtotal').textContent = subtotal.toFixed(2);
+            document.getElementById('total').textContent = (subtotal + frete).toFixed(2);
+        }
+
+        // + e -
+        document.querySelectorAll('.increment').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const input = btn.parentElement.querySelector('.qty');
+                input.value++;
+                atualizarTotal();
+            });
+        });
+
+        document.querySelectorAll('.decrement').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const input = btn.parentElement.querySelector('.qty');
+                if (input.value > 1) {
+                    input.value--;
+                    atualizarTotal();
+                }
+            });
+        });
+
+        // remover
+        document.querySelectorAll('.remove-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                btn.closest('.item').remove();
+                atualizarTotal();
+            });
+        });
+
+        // frete
+        document.getElementById('calcFrete').addEventListener('click', () => {
+            const cep = document.getElementById('cep').value;
+
+            if (cep.length < 8) {
+                alert("CEP inválido");
+                return;
             }
+
+            const frete = 10;
+            document.getElementById('frete').textContent = frete.toFixed(2);
+            atualizarTotal();
         });
 
-        incrementBtn1.addEventListener('click', () => {
-            let currentValue = parseInt(quantityInput1.value);
-            quantityInput1.value = currentValue + 1;
-        });
 
-        // Item 2
-        const decrementBtn2 = document.getElementById('decrement2');
-        const incrementBtn2 = document.getElementById('increment2');
-        const quantityInput2 = document.getElementById('quantity2');
-
-        decrementBtn2.addEventListener('click', () => {
-            let currentValue = parseInt(quantityInput2.value);
-            if (currentValue > 1) {
-                quantityInput2.value = currentValue - 1;
-            }
-        });
-
-        incrementBtn2.addEventListener('click', () => {
-            let currentValue = parseInt(quantityInput2.value);
-            quantityInput2.value = currentValue + 1;
-        });
-
-        // Item 3
-        const decrementBtn3 = document.getElementById('decrement3');
-        const incrementBtn3 = document.getElementById('increment3');
-        const quantityInput3 = document.getElementById('quantity3');
-
-        decrementBtn3.addEventListener('click', () => {
-            let currentValue = parseInt(quantityInput3.value);
-            if (currentValue > 1) {
-                quantityInput3.value = currentValue - 1;
-            }
-        });
-
-        incrementBtn3.addEventListener('click', () => {
-            let currentValue = parseInt(quantityInput3.value);
-            quantityInput3.value = currentValue + 1;
-        });
+        atualizarTotal();
     </script>
+
 </body>
 
 </html>
