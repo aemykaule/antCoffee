@@ -6,57 +6,146 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Produto</title>
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
-<body>
-    <div class="flex flex-row">
-        <div class="">
-            <img src="./img/paoCoelho.png" alt="" class="w-[32rem] object-cover">
-        </div>
-        <div class="">
-            <h3 class="font-bold text-4xl lg:text-4xl leading-tight max-w-xl">Pão de Nutela</h3>
-            <p class="leading-tight text-xl lg:text-2xl mt-4 mb-6">Pão macio recheado com Nutella, moldado no formato de
-                um coelhinho fofo. Assado até
-                ficar dourado e brilhante, com massa leve e sabor delicado — perfeito para acompanhar um café ou adoçar
-                o seu dia</p>
-            <a href="./carrinho.html">
-                <button class="bg-[#5a0f14] text-white px-8 py-3 rounded-md">
-                    Adicionar ao Carrinho
-                </button>
-            </a>
-        </div>
+<body class="overflow-x-hidden m-5 lg:m-10">
+
+    <!-- PRODUTO -->
+    <div class="relative">
+
+    <!-- IMAGEM (fica à esquerda) -->
+    <div class="m-5">
+        <img src="./img/paoCoelho.png"
+            class="w-[20rem] lg:w-[28rem] object-cover">
     </div>
-    <div class="mt-5">
-        <div class="">
-            <h4 class="font-bold text-2xl lg:text-3xl">Outros Produtos</h4>
-        </div>
-        <div class="flex flex-row gap-4">
-            <div class="">
-                <img src="./img/cookies.png" alt="">
+
+    <!-- TEXTO -->
+    <div class="m-5 flex flex-col items-center text-center
+                lg:absolute lg:left-1/2 lg:-translate-x-1/2 lg:top-1/2 lg:-translate-y-1/2">
+
+        <h3 class="font-bold text-4xl leading-tight">
+            Pão de Nutela
+        </h3>
+
+        <p class="text-xl mt-4 mb-6 max-w-xl">
+            Pão macio recheado com Nutella, moldado no formato de um coelhinho fofo.
+            Assado até ficar dourado e brilhante, com massa leve e sabor delicado —
+            perfeito para acompanhar um café ou adoçar o seu dia
+        </p>
+
+        <p class="text-2xl font-bold mb-4">R$15,83</p>
+
+        <button class="bg-[#5a0f14] text-white px-8 py-3 rounded-md">
+            Adicionar ao Carrinho
+        </button>
+    </div>
+
+</div>
+    <br>
+    <div class="border-t mt-10"></div>
+
+
+    <!-- OUTROS PRODUTOS -->
+    <div class="mt-10 lg:mt-16">
+
+        <h4 class="font-bold text-2xl lg:text-3xl mb-6">
+            Outros Produtos
+        </h4>
+
+        <div class="flex gap-4 overflow-x-auto scroll-smooth px-2
+            lg:grid lg:grid-cols-6 lg:gap-10 lg:overflow-visible text-xl">
+
+            <!-- ITEM -->
+            <div class="min-w-[150px] flex-shrink-0 text-center
+            transition duration-300
+            hover:opacity-70 hover:scale-105">
+                <img src="./img/cookies.png" class="rounded-lg mx-auto">
                 <p>Cookies</p>
+                <p class="text-gray-700">R$15,83</p>
             </div>
-            <div class="">
-                <img src="./img/folhadoMorango.png" alt="">
+
+            <div class="min-w-[150px] flex-shrink-0 text-center
+            transition duration-300
+            hover:opacity-70 hover:scale-105">
+                <img src="./img/folhadoMorango.png" class="rounded-lg mx-auto">
                 <p>Folhado com Morango</p>
+                <p class="text-gray-700">R$12,50</p>
             </div>
-            <div class="">
-                <img src="./img/cafeAoLeite.png" alt="">
+
+            <div class="min-w-[150px] flex-shrink-0 text-center
+            transition duration-300
+            hover:opacity-70 hover:scale-105">
+                <img src="./img/cafeAoLeite.png" class="rounded-lg mx-auto">
                 <p>Café com Leite</p>
+                <p class="text-gray-700">R$8,90</p>
             </div>
-            <div class="">
-                <img src="./img/poteFelicidade.png" alt="">
+
+            <div class="min-w-[150px] flex-shrink-0 text-center
+            transition duration-300
+            hover:opacity-70 hover:scale-105">
+                <img src="./img/poteFelicidade.png" class="rounded-lg mx-auto">
                 <p>Pote de Felicidade</p>
+                <p class="text-gray-700">R$18,00</p>
             </div>
-            <div class="">
-                <img src="./img/tortaAmora.png" alt="">
+
+            <div class="min-w-[150px] flex-shrink-0 text-center
+            transition duration-300
+            hover:opacity-70 hover:scale-105">
+                <img src="./img/tortaAmora.png" class="rounded-lg mx-auto">
                 <p>Torta de Amora</p>
+                <p class="text-gray-700">R$20,00</p>
             </div>
-            <div class="">
-                <img src="./img/cafeCold.png" alt="">
+
+            <div class="min-w-[150px] flex-shrink-0 text-center
+            transition duration-300
+            hover:opacity-70 hover:scale-105">
+                <img src="./img/cafeCold.png" class="rounded-lg mx-auto">
                 <p>Café Gelado</p>
+                <p class="text-gray-700">R$10,00</p>
             </div>
+
         </div>
     </div>
+
+    <!-- FOOTER -->
+    <footer class="mt-2 bg-[##5a0f14]">
+        <!-- FOOTER -->
+        <div class="mt-6 text-sm text-gray-500">
+
+            <p class="text-center text-lg mb-4">
+                Home | Cardápio | Doces | Bolos | Cafés
+            </p>
+
+            <div class="flex flex-col md:flex-row items-center justify-between px-4 md:px-10 gap-4">
+
+                <!-- LOGO -->
+                <div class="flex items-center gap-2">
+                    <img src="./img/logo_transparente 2.png" class="w-[70px] md:w-[85px]" />
+                    <p class="text-sm">Formiga Coffee</p>
+                </div>
+
+                <!-- ÍCONES -->
+                <div class="grid grid-cols-3 gap-3 md:gap-4 text-[#5a0f14] text-lg md:text-2xl">
+                    <i class="fab fa-spotify"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-facebook"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-youtube"></i>
+                    <i class="fab fa-linkedin"></i>
+                </div>
+            </div>
+
+            <div class="flex justify-center mt-4">
+                <p>©2026 | Todos os direitos reservados.</p>
+            </div>
+
+        </div>
+
+    </footer>
+
 </body>
 
 </html>
