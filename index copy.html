@@ -120,59 +120,236 @@
     </div>
 
     <main class="flex-1 w-full sm:w-auto sm:pl-48">
-      <div class="imagemGrande">
+      <section id="imagemGrande">
         <img src="./img/fundoMain.png" class="w-full object-cover">
-      </div>
-      <div class="destaques">
+      </section>
+      <section id="destaques">
         <p
-          class="text-white bg-rose-950 sm:w-64 sm:p-2 sm:mt-10 sm:ml-[60px] sm:mb-10 text-center rounded-lg sm:text-3xl p-1 text-sm w-20 ml-8 mt-5 mb-5">
-          Destaques</p>
-        <div class="flex-none w-full snap-center">
-          <div class="relative h-[60vh] sm:h-screen w-full overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1920&q=80"
-              class="absolute inset-0 w-full h-full object-cover" alt="Café 1">
-            <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
-              <h3 class="text-white text-4xl sm:text-7xl font-bold uppercase tracking-tighter">Cafés Especiais</h3>
+          class="text-white bg-rose-950 sm:w-64 sm:p-2 sm:mt-20 sm:ml-[60px] sm:mb-20 text-center rounded-lg sm:text-3xl p-1 text-sm w-20 ml-8 mt-5 mb-5">
+          Destaques
+        </p>
+
+        <!-- Carrossel -->
+        <div class="relative w-[80%] mx-auto mt-8 mb-16">
+          <div class="relative overflow-hidden">
+            <!-- Container das imagens -->
+            <div id="carousel-container" class="relative w-full">
+              <div class="carousel-wrapper flex transition-transform duration-500 ease-in-out"
+                style="transform: translateX(0%)">
+                <img src="./img/imagem-carousel1.png" alt="Café 1"
+                  class="w-full h-full object-cover flex-shrink-0 z-10">
+                <img src="./img/imagem-carousel2.png" alt="Café 2" class="w-full h-full object-cover flex-shrink-0">
+                <img src="./img/imagem-carousel3.png" alt="Café 3" class="w-full h-full object-cover flex-shrink-0">
+              </div>
             </div>
+
+            <!-- Botão anterior -->
+            <button id="carousel-prev"
+              class="absolute left-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white rounded-full p-2 transition z-10">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+              </svg>
+            </button>
+
+            <!-- Botão próximo -->
+            <button id="carousel-next"
+              class="absolute right-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white rounded-full p-2 transition z-10">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+              </svg>
+            </button>
           </div>
         </div>
+      </section>
+      <section id="produtos">
+        <div class="mt-10 lg:mt-16 p-5 lg:p-10">
 
-        <div class="flex-none w-full snap-center">
-          <div class="relative h-[60vh] sm:h-screen w-full overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=1920&q=80"
-              class="absolute inset-0 w-full h-full object-cover" alt="Café 2">
-            <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
-              <h3 class="text-white text-4xl sm:text-7xl font-bold uppercase tracking-tighter">Grãos Selecionados</h3>
+          <h4 class="font-bold text-2xl lg:text-3xl mb-16">
+            CAFÉS E BEBIDAS
+          </h4>
+
+          <div class="flex gap-4 overflow-x-auto scroll-smooth px-2
+            lg:grid lg:grid-cols-6 lg:gap-10 lg:overflow-visible text-xl">
+
+            <!-- ITEM -->
+            <div class="min-w-[150px] flex-shrink-0 text-center
+            transition duration-300
+            hover:opacity-70 hover:scale-105">
+              <img src="./img/cafeAoLeite.png" class="rounded-lg mx-auto">
+              <p>Café com Leite</p>
+              <p class="text-gray-700">R$12,90</p>
             </div>
+
+            <div class="min-w-[150px] flex-shrink-0 text-center
+            transition duration-300
+            hover:opacity-70 hover:scale-105">
+              <img src="./img/cafeCold.png" class="rounded-lg mx-auto">
+              <p>Café Gelado</p>
+              <p class="text-gray-700">R$16,00</p>
+            </div>
+
+            <div class="min-w-[150px] flex-shrink-0 text-center
+            transition duration-300
+            hover:opacity-70 hover:scale-105">
+              <img src="./img/cafeAoLeite.png" class="rounded-lg mx-auto">
+              <p>Milkshake</p>
+              <p class="text-gray-700">R$18,00</p>
+            </div>
+
+            <div class="min-w-[150px] flex-shrink-0 text-center
+            transition duration-300
+            hover:opacity-70 hover:scale-105">
+              <img src="./img/poteFelicidade.png" class="rounded-lg mx-auto">
+              <p>Chocolate Quente</p>
+              <p class="text-gray-700">R$15,30</p>
+            </div>
+
+            <div class="min-w-[150px] flex-shrink-0 text-center
+            transition duration-300
+            hover:opacity-70 hover:scale-105">
+              <img src="./img/tortaAmora.png" class="rounded-lg mx-auto">
+              <p>Suco Natural</p>
+              <p class="text-gray-700">R$10,00</p>
+            </div>
+
+            <div class="min-w-[150px] flex-shrink-0 text-center
+            transition duration-300
+            hover:opacity-70 hover:scale-105">
+              <img src="./img/cafeCold.png" class="rounded-lg mx-auto">
+              <p>Batida de Fruta</p>
+              <p class="text-gray-700">R$17,90</p>
+            </div>
+
           </div>
+
         </div>
+        <div class="mt-10 lg:mt-16 p-5 lg:p-10">
 
-      </div>
+          <h4 class="font-bold text-2xl lg:text-3xl mb-16">
+            BOLOS E TORTAS
+          </h4>
 
-      <button onclick="document.getElementById('carousel').scrollLeft -= window.innerWidth"
-        class="absolute left-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/40 backdrop-blur-md p-4 rounded-full text-white transition-all hidden sm:block">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
-          class="w-8 h-8">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
-        </svg>
-      </button>
+          <div class="flex gap-4 overflow-x-auto scroll-smooth px-2
+            lg:grid lg:grid-cols-6 lg:gap-10 lg:overflow-visible text-xl">
 
-      <button onclick="document.getElementById('carousel').scrollLeft += window.innerWidth"
-        class="absolute right-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/40 backdrop-blur-md p-4 rounded-full text-white transition-all hidden sm:block">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
-          class="w-8 h-8">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-        </svg>
-      </button>
-  </div>
-  </div>
-  </div>
-  </main>
+            <!-- ITEM -->
+            <div class="min-w-[150px] flex-shrink-0 text-center
+            transition duration-300
+            hover:opacity-70 hover:scale-105">
+              <img src="./img/cookies.png" class="rounded-lg mx-auto">
+              <p>Cookies</p>
+              <p class="text-gray-700">R$15,83</p>
+            </div>
+
+            <div class="min-w-[150px] flex-shrink-0 text-center
+            transition duration-300
+            hover:opacity-70 hover:scale-105">
+              <img src="./img/folhadoMorango.png" class="rounded-lg mx-auto">
+              <p>Folhado com Morango</p>
+              <p class="text-gray-700">R$12,50</p>
+            </div>
+
+            <div class="min-w-[150px] flex-shrink-0 text-center
+            transition duration-300
+            hover:opacity-70 hover:scale-105">
+              <img src="./img/cafeAoLeite.png" class="rounded-lg mx-auto">
+              <p>Café com Leite</p>
+              <p class="text-gray-700">R$8,90</p>
+            </div>
+
+            <div class="min-w-[150px] flex-shrink-0 text-center
+            transition duration-300
+            hover:opacity-70 hover:scale-105">
+              <img src="./img/poteFelicidade.png" class="rounded-lg mx-auto">
+              <p>Pote de Felicidade</p>
+              <p class="text-gray-700">R$18,00</p>
+            </div>
+
+            <div class="min-w-[150px] flex-shrink-0 text-center
+            transition duration-300
+            hover:opacity-70 hover:scale-105">
+              <img src="./img/tortaAmora.png" class="rounded-lg mx-auto">
+              <p>Torta de Amora</p>
+              <p class="text-gray-700">R$20,00</p>
+            </div>
+
+            <div class="min-w-[150px] flex-shrink-0 text-center
+            transition duration-300
+            hover:opacity-70 hover:scale-105">
+              <img src="./img/cafeCold.png" class="rounded-lg mx-auto">
+              <p>Café Gelado</p>
+              <p class="text-gray-700">R$10,00</p>
+            </div>
+
+          </div>
+
+        </div>
+        <div class="mt-10 lg:mt-16 p-5 lg:p-10">
+
+          <h4 class="font-bold text-2xl lg:text-3xl mb-16">
+            DOCES
+          </h4>
+
+          <div class="flex gap-4 overflow-x-auto scroll-smooth px-2
+            lg:grid lg:grid-cols-6 lg:gap-10 lg:overflow-visible text-xl">
+
+            <!-- ITEM -->
+            <div class="min-w-[150px] flex-shrink-0 text-center
+            transition duration-300
+            hover:opacity-70 hover:scale-105">
+              <img src="./img/cookies.png" class="rounded-lg mx-auto">
+              <p>Cookies</p>
+              <p class="text-gray-700">R$15,83</p>
+            </div>
+
+            <div class="min-w-[150px] flex-shrink-0 text-center
+            transition duration-300
+            hover:opacity-70 hover:scale-105">
+              <img src="./img/folhadoMorango.png" class="rounded-lg mx-auto">
+              <p>Folhado com Morango</p>
+              <p class="text-gray-700">R$12,50</p>
+            </div>
+
+            <div class="min-w-[150px] flex-shrink-0 text-center
+            transition duration-300
+            hover:opacity-70 hover:scale-105">
+              <img src="./img/cafeAoLeite.png" class="rounded-lg mx-auto">
+              <p>Café com Leite</p>
+              <p class="text-gray-700">R$8,90</p>
+            </div>
+
+            <div class="min-w-[150px] flex-shrink-0 text-center
+            transition duration-300
+            hover:opacity-70 hover:scale-105">
+              <img src="./img/poteFelicidade.png" class="rounded-lg mx-auto">
+              <p>Pote de Felicidade</p>
+              <p class="text-gray-700">R$18,00</p>
+            </div>
+
+            <div class="min-w-[150px] flex-shrink-0 text-center
+            transition duration-300
+            hover:opacity-70 hover:scale-105">
+              <img src="./img/tortaAmora.png" class="rounded-lg mx-auto">
+              <p>Torta de Amora</p>
+              <p class="text-gray-700">R$20,00</p>
+            </div>
+
+            <div class="min-w-[150px] flex-shrink-0 text-center
+            transition duration-300
+            hover:opacity-70 hover:scale-105">
+              <img src="./img/cafeCold.png" class="rounded-lg mx-auto">
+              <p>Café Gelado</p>
+              <p class="text-gray-700">R$10,00</p>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+    </main>
   </div>
 
   <script src="./src/js/menu.js"></script>
 </body>
-
-</html>
 
 </html>
