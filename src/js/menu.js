@@ -42,4 +42,85 @@ if (mobileMenuClose) {
   });
 }
 
+// Carrossel
+class Carousel {
+  constructor() {
+    this.container = document.getElementById('carousel-container');
+    this.wrapper = document.querySelector('.carousel-wrapper');
+    this.images = document.querySelectorAll('.carousel-wrapper img');
+    this.prevBtn = document.getElementById('carousel-prev');
+    this.nextBtn = document.getElementById('carousel-next');
+    this.indicators = document.querySelectorAll('.carousel-indicator');
+    this.currentIndex = 0;
+    this.totalImages = this.images.length;
+    this.autoPlayInterval = null;
+
+    if (this.prevBtn && this.nextBtn) {
+      this.init();
+    }
+  }
+
+  init() {
+    this.prevBtn.addEventListener('click', () => this.prev());
+    this.nextBtn.addEventListener('click', () => this.next());
+    this.indicators.forEach((indicator, index) => {
+      indicator.addEventListener('click', () => this.goToSlide(index));
+    });
+    this.autoPlay();
+  }
+
+  updateCarousel() {
+    const offset = -this.currentIndex * 100;
+    this.wrapper.style.transform = `translateX(${offset}%)`;
+    this.updateIndicators();
+  }
+
+  updateIndicators() {
+    this.indicators.forEach((indicator, index) => {
+      if (index === this.currentIndex) {
+        indicator.classList.remove('bg-white/50');
+        indicator.classList.add('bg-white');
+      } else {
+        indicator.classList.remove('bg-white');
+        indicator.classList.add('bg-white/50');
+      }
+    });
+  }
+
+  prev() {
+    this.currentIndex = (this.currentIndex - 1 + this.totalImages) % this.totalImages;
+    this.updateCarousel();
+    this.resetAutoPlay();
+  }
+
+  next() {
+    this.currentIndex = (this.currentIndex + 1) % this.totalImages;
+    this.updateCarousel();
+    this.resetAutoPlay();
+  }
+
+  goToSlide(index) {
+    this.currentIndex = index;
+    this.updateCarousel();
+    this.resetAutoPlay();
+  }
+
+  autoPlay() {
+    this.autoPlayInterval = setInterval(() => {
+      this.currentIndex = (this.currentIndex + 1) % this.totalImages;
+      this.updateCarousel();
+    }, 5000);
+  }
+
+  resetAutoPlay() {
+    clearInterval(this.autoPlayInterval);
+    this.autoPlay();
+  }
+}
+
+// Inicializar o carrossel quando o DOM estiver carregado
+document.addEventListener('DOMContentLoaded', () => {
+  new Carousel();
+});
+
 
