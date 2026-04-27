@@ -1,20 +1,20 @@
 <!doctype html>
 <html lang="pt-br">
- 
+
 <head>
     <meta charset="UTF-8" />
     <title>Sua Conta</title>
     <script src="https://cdn.tailwindcss.com"></script>
- 
+
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
- 
+
     <!-- Material Icons -->
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 </head>
- 
+
 <body class="w-full min-h-screen pt-16 sm:pt-16 flex-col md:flex-row">
- 
+
     <!-- Header -->
     <header class="hidden sm:block fixed top-0 right-0 left-48 z-40 bg-white border-b border-gray-100">
         <div class="flex items-center justify-between px-6 py-4 h-16">
@@ -51,7 +51,7 @@
     <!-- Sidebar -->
     <nav id="mobile-menu"
         class="hidden sm:flex fixed inset-0 sm:inset-y-0 sm:left-0 w-full sm:w-48 h-full sm:h-screen z-[100] flex-col border-r border-gray-700 bg-white sm:bg-white/5">
- 
+
         <button type="button" data-mobile-menu-close aria-controls="mobile-menu"
             class="absolute top-6 right-6 sm:hidden text-gray-500 hover:text-black p-2">
             <svg id="mobile-menu-close-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -59,11 +59,11 @@
                 <path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
         </button>
- 
+
         <div class="flex items-center justify-center py-12 sm:px-4 sm:py-6">
             <img src="./img/logo_transparente 2.png" alt="antCoffee" class="h-16 sm:h-12 w-auto" />
         </div>
- 
+
         <div class="flex-1 px-8 sm:px-4 py-6">
             <div class="space-y-6 sm:space-y-3">
                 <a href="./index copy.html"
@@ -88,7 +88,7 @@
                 </a>
             </div>
         </div>
- 
+
         <div class="border-t border-gray-100 sm:border-gray-700 px-8 sm:px-4 py-8 sm:py-6 space-y-6 sm:space-y-3">
             <p class="px-2 text-gray-400 uppercase text-xs tracking-widest">Sua Conta</p>
             <a href="./conta.html"
@@ -103,7 +103,7 @@
             </a>
         </div>
     </nav>
- 
+
     <div
         class="sm:hidden fixed top-0 left-0 right-0 bg-white z-50 px-4 py-3 flex items-center justify-between border-b border-gray-100">
         <button type="button" data-mobile-menu-button aria-controls="mobile-menu" aria-expanded="false"
@@ -122,21 +122,21 @@
             </svg>
         </button>
     </div>
- 
+
     <main class="flex-1 w-full sm:w-auto sm:pl-48 text-gray-800 p-5 ml-2">
-        <div class="flex-1 p-8 overflow-auto"> 
+        <div class="flex-1 p-8 overflow-auto">
             <!-- HEADER -->
             <div class="flex justify-between items-center mb-6">
                 <div class="flex items-center gap-4">
                     <img src="/img/dogFone.png" class="w-20 h-20 rounded-full" />
                     <h1 class="text-2xl font-semibold text-3xl ">Dog Fone Azul</h1>
                 </div>
- 
+
                 <button class="bg-[#5a0f14] text-white px-5 py-2 rounded-md">
                     Sua Conta
                 </button>
             </div>
- 
+
             <!-- LINHA -->
             <div class="border-t mb-6"></div>
             <!-- CARDS -->
@@ -152,19 +152,18 @@
                             <p>Edit</p>
                         </button>
                     </div>
- 
-    <div class="grid grid-cols-1 gap-4">
-        <input placeholder="Nome Completo" class="bg-gray-200 p-3 rounded-md outline-none w-full" />
 
-        <input placeholder="Telefone" class="bg-gray-200 p-3 rounded-md outline-none w-full" />
+                    <div class="grid grid-cols-1 gap-4">
+                        <input placeholder="Nome Completo" class="bg-gray-200 p-3 rounded-md outline-none w-full" />
 
-        <input placeholder="CPF" class="bg-gray-200 p-3 rounded-md outline-none w-full" />
+                        <input placeholder="Telefone" class="bg-gray-200 p-3 rounded-md outline-none w-full" />
 
-        <input placeholder="E-mail" class="bg-gray-200 p-3 rounded-md outline-none w-full" />
+                        <input placeholder="CPF" class="bg-gray-200 p-3 rounded-md outline-none w-full" />
 
-        <input placeholder="Senha"
-            class="bg-gray-200 p-3 rounded-md outline-none w-full" />
-    </div>
+                        <input placeholder="E-mail" class="bg-gray-200 p-3 rounded-md outline-none w-full" />
+
+                        <input placeholder="Senha" class="bg-gray-200 p-3 rounded-md outline-none w-full" />
+                    </div>
 
 
                     <div class="flex justify-end mt-4">
@@ -173,75 +172,75 @@
                         </button>
                     </div>
                 </div>
- 
-<!-- CARD ENDEREÇO -->
-<div class="border border-[#c9a3a3] rounded-xl p-6 mb-6 bg-white/70">
-    <div class="flex justify-between items-center mb-4">
-        <h2 class="font-semibold text-2xl">Endereço</h2>
-        <button class="flex items-center gap-2 text-sm bg-gray-200 px-3 py-1 rounded-full">
-            <span class="material-symbols-outlined">
-                edit
-            </span>
-            <p>Edit</p>
-        </button>
-    </div>
 
-    <div class="grid grid-cols-1 gap-4">
+                <!-- CARD ENDEREÇO -->
+                <div class="border border-[#c9a3a3] rounded-xl p-6 mb-6 bg-white/70">
+                    <div class="flex justify-between items-center mb-4">
+                        <h2 class="font-semibold text-2xl">Endereço</h2>
+                        <button class="flex items-center gap-2 text-sm bg-gray-200 px-3 py-1 rounded-full">
+                            <span class="material-symbols-outlined">
+                                edit
+                            </span>
+                            <p>Edit</p>
+                        </button>
+                    </div>
 
-  <!-- Estado -->
-        <select class="bg-gray-200 p-3 rounded-md w-full">
-            <option>Estado</option>
-            <option>Acre (AC)</option>
-            <option>Alagoas (AL)</option>
-            <option>Amapá (AP)</option>
-            <option>Amazonas (AM)</option>
-            <option>Bahia (BA)</option>
-            <option>Ceará (CE)</option>
-            <option>Espírito Santo (ES)</option>
-            <option>Goiás (GO)</option>
-            <option>Maranhão (MA)</option>
-            <option>Mato Grosso (MT)</option>
-            <option>Mato Grosso do Sul (MS)</option>
-            <option>Minas Gerais (MG)</option>
-            <option>Pará (PA)</option>
-            <option>Paraíba (PB)</option>
-            <option>Paraná (PR)</option>
-            <option>Pernambuco (PE)</option>
-            <option>Piauí (PI)</option>
-            <option>Rio de Janeiro (RJ)</option>
-            <option>Rio Grande do Norte (RN)</option>
-            <option>Rio Grande do Sul (RS)</option>
-            <option>Rondônia (RO)</option>
-            <option>Roraima (RR)</option>
-            <option>Santa Catarina (SC)</option>
-            <option>São Paulo (SP)</option>
-            <option>Sergipe (SE)</option>
-            <option>Tocantins (TO)</option>
-        </select>
+                    <div class="grid grid-cols-1 gap-4">
 
-        <!-- Cidade -->
-        <input placeholder="Cidade" class="bg-gray-200 p-3 rounded-md w-full" />
-        <!-- Número -->
-        <input placeholder="Número" class="bg-gray-200 p-3 rounded-md w-full" />
+                        <!-- Estado -->
+                        <select class="bg-gray-200 p-3 rounded-md w-full">
+                            <option>Estado</option>
+                            <option>Acre (AC)</option>
+                            <option>Alagoas (AL)</option>
+                            <option>Amapá (AP)</option>
+                            <option>Amazonas (AM)</option>
+                            <option>Bahia (BA)</option>
+                            <option>Ceará (CE)</option>
+                            <option>Espírito Santo (ES)</option>
+                            <option>Goiás (GO)</option>
+                            <option>Maranhão (MA)</option>
+                            <option>Mato Grosso (MT)</option>
+                            <option>Mato Grosso do Sul (MS)</option>
+                            <option>Minas Gerais (MG)</option>
+                            <option>Pará (PA)</option>
+                            <option>Paraíba (PB)</option>
+                            <option>Paraná (PR)</option>
+                            <option>Pernambuco (PE)</option>
+                            <option>Piauí (PI)</option>
+                            <option>Rio de Janeiro (RJ)</option>
+                            <option>Rio Grande do Norte (RN)</option>
+                            <option>Rio Grande do Sul (RS)</option>
+                            <option>Rondônia (RO)</option>
+                            <option>Roraima (RR)</option>
+                            <option>Santa Catarina (SC)</option>
+                            <option>São Paulo (SP)</option>
+                            <option>Sergipe (SE)</option>
+                            <option>Tocantins (TO)</option>
+                        </select>
 
-        <!-- Endereço -->
-        <input placeholder="Endereço" class="bg-gray-200 p-3 rounded-md w-full" />
+                        <!-- Cidade -->
+                        <input placeholder="Cidade" class="bg-gray-200 p-3 rounded-md w-full" />
+                        <!-- Número -->
+                        <input placeholder="Número" class="bg-gray-200 p-3 rounded-md w-full" />
 
-        <!-- Bairro -->
-        <input placeholder="Bairro" class="bg-gray-200 p-3 rounded-md w-full" />
+                        <!-- Endereço -->
+                        <input placeholder="Endereço" class="bg-gray-200 p-3 rounded-md w-full" />
 
-    </div>
+                        <!-- Bairro -->
+                        <input placeholder="Bairro" class="bg-gray-200 p-3 rounded-md w-full" />
 
-    <div class="flex justify-end mt-4">
-        <button class="bg-[#5a0f14] text-white px-4 py-1 rounded-full">
-            Salvar
-        </button>
-    </div>
-</div>
+                    </div>
+
+                    <div class="flex justify-end mt-4">
+                        <button class="bg-[#5a0f14] text-white px-4 py-1 rounded-full">
+                            Salvar
+                        </button>
+                    </div>
+                </div>
     </main>
 
     <!-- FOOTER -->
-    <footer class="mt-2 bg-[##5a0f14]">
+    <footer class="border-t border-gray-200 flex-1 w-full sm:w-auto sm:pl-48 mt-2 bg-[##5a0f14]">
         <div class="mt-1 text-sm text-gray-500">
             <div>
                 <!-- MENU -->
@@ -250,13 +249,13 @@
 
             <div class="flex items-center justify-between px-10 mt-5">
                 <!-- LOGO -->
-                <div class="flex items-center gap-2 ms-[225px]">
+                <div class="flex items-center gap-2">
                     <img src="./img/logo_transparente 2.png" class="w-[85px]" />
                     <p class="text-sm">Formiga Coffee</p>
                 </div>
 
                 <!-- ÍCONES -->
-                <div class="grid grid-cols-3 gap-4 text-[#5a0f14] text-2xl me-[40px]">
+                <div class="grid grid-cols-3 gap-4 text-[#5a0f14] text-2xl">
 
                     <i class="fab fa-spotify hover:scale-110 transition cursor-pointer"></i>
                     <i class="fab fa-instagram hover:scale-110 transition cursor-pointer"></i>
@@ -276,6 +275,7 @@
 
         </div>
     </footer>
+    <script src="./src/js/menu.js"></script>
 </body>
 
 </html>
