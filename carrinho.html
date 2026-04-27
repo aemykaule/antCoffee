@@ -119,125 +119,127 @@
     </div>
 
     <main class="flex-1 w-full sm:w-auto sm:pl-48">
-    <div class="flex-1 p-4 sm:p-6 lg:p-8 mt-32">
+        <div class="flex-1 p-4 sm:p-6 lg:p-8 mt-32">
 
-        <!-- HEADER -->
-        <div class="flex justify-between items-center mb-6">
-            <button class="bg-[#5a0f14] text-white px-5 py-2 rounded-md">
-                Seu Carrinho
-            </button>
-
-            <a href="index.html" class="text-[#5a0f14] underline">
-                ← Continuar comprando
-            </a>
-        </div>
-
-        <div class="border-t mb-6 border-[#c9a3a3]"></div>
-
-        <div class="flex flex-col lg:flex-row gap-6">
-
-            <!-- CARD PRODUTOS -->
-            <div class="border border-[#c9a3a3] bg-[#D9D9D9] rounded-xl p-6 flex-1 shadow-xl">
-
-                <!-- ITEM -->
-                <div class="item flex items-start gap-4 mb-6">
-                    <img src="./img/cafeGelado.png" class="w-24 h-24 rounded-lg">
-
-                    <div class="flex flex-col gap-2">
-                        <span>Café Gelado</span>
-                        <p class="price" data-price="16.90">R$ 16,90</p>
-
-                        <div class="flex gap-2">
-                            <button class="decrement bg-[#5a0f14] text-white px-3">-</button>
-                            <input type="text" value="1" class="qty w-12 text-center border">
-                            <button class="increment bg-[#5a0f14] text-white px-3">+</button>
-                        </div>
-
-                        <button class="remove-btn text-red-600 text-sm">Remover</button>
-                    </div>
-                </div>
-
-                <!-- ITEM -->
-                <div class="item flex items-start gap-4 mb-6">
-                    <img src="./img/boloMorango.png" class="w-24 h-24 rounded-lg">
-
-                    <div class="flex flex-col gap-2">
-                        <span>Bolo de Morango</span>
-                        <p class="price" data-price="24.90">R$ 24,90</p>
-
-                        <div class="flex gap-2">
-                            <button class="decrement bg-[#5a0f14] text-white px-3">-</button>
-                            <input type="text" value="1" class="qty w-12 text-center border">
-                            <button class="increment bg-[#5a0f14] text-white px-3">+</button>
-                        </div>
-
-                        <button class="remove-btn text-red-600 text-sm">Remover</button>
-                    </div>
-                </div>
-
-                <!-- ITEM -->
-                <div class="item flex items-start gap-4 mb-6">
-                    <img src="./img/boloChoco.png" class="w-24 h-24 rounded-lg">
-
-                    <div class="flex flex-col gap-2">
-                        <span>Bolo de Chocolate</span>
-                        <p class="price" data-price="29.90">R$ 29,90</p>
-
-                        <div class="flex gap-2">
-                            <button class="decrement bg-[#5a0f14] text-white px-3">-</button>
-                            <input type="text" value="1" class="qty w-12 text-center border">
-                            <button class="increment bg-[#5a0f14] text-white px-3">+</button>
-                        </div>
-
-                        <button class="remove-btn text-red-600 text-sm">Remover</button>
-                    </div>
-                </div>
-
-                <!-- TOTAL -->
-                <div class="text-right mt-6">
-                    <p>Subtotal: R$ <span id="subtotal">0.00</span></p>
-                    <p>Frete: R$ <span id="frete">0.00</span></p>
-                    <p class="font-bold">Total: R$ <span id="total">0.00</span></p>
-                </div>
-
-            </div>
-
-            <!-- PAGAMENTO -->
-            <div class="border border-[#c9a3a3] bg-[#d9d9d9] rounded-xl p-6 w-full lg:max-w-sm shadow-xl">
-
-                <h2 class="font-semibold mb-3">Detalhes de Pagamento</h2>
-
-                <input id="nome" placeholder="Nome" class="border p-2 rounded w-full mb-2">
-                <input id="telefone" placeholder="Telefone" class="border p-2 rounded w-full mb-2">
-                <input id="cep" placeholder="CEP" class="border p-2 rounded w-full mb-2">
-
-                <button id="calcFrete" class="bg-[#5a0f14] text-white w-full py-2 rounded mb-3">
-                    Calcular Frete
+            <!-- HEADER -->
+            <div class="flex justify-between items-center mb-6">
+                <button class="bg-[#5a0f14] text-white px-5 py-2 rounded-md">
+                    Seu Carrinho
                 </button>
 
-                <select id="pagamento" class="border p-2 rounded w-full mb-3">
-                    <option>Cartão</option>
-                    <option>Pix</option>
-                    <option>Boleto</option>
-                </select>
-                <a href="pedidoFeito.html">
-                    <button class="bg-[#5a0f14] text-white w-full py-2 rounded">
-                        Pagar
-                    </button>
+                <a href="index.html" class="text-[#5a0f14] underline">
+                    ← Continuar comprando
                 </a>
+            </div>
+
+            <div class="border-t mb-6 border-[#c9a3a3]"></div>
+
+            <div class="flex flex-col lg:flex-row gap-6">
+
+                <!-- CARD PRODUTOS -->
+                <div class="border border-[#c9a3a3] bg-[#D9D9D9] rounded-xl p-6 flex-1 shadow-xl">
+
+                    <!-- ITEM -->
+                    <div class="item flex items-start gap-4 mb-6">
+                        <img src="./img/cafeGelado.png" class="w-24 h-24 rounded-lg">
+
+                        <div class="flex flex-col gap-2">
+                            <span>Café Gelado</span>
+                            <p class="price" data-price="16.90">R$ 16,90</p>
+
+                            <div class="flex gap-2">
+                                <button class="decrement bg-[#5a0f14] text-white px-3">-</button>
+                                <input type="text" value="1" class="qty w-12 text-center border">
+                                <button class="increment bg-[#5a0f14] text-white px-3">+</button>
+                            </div>
+
+                            <button class="remove-btn text-red-600 text-sm">Remover</button>
+                        </div>
+                    </div>
+
+                    <!-- ITEM -->
+                    <div class="item flex items-start gap-4 mb-6">
+                        <img src="./img/boloMorango.png" class="w-24 h-24 rounded-lg">
+
+                        <div class="flex flex-col gap-2">
+                            <span>Bolo de Morango</span>
+                            <p class="price" data-price="24.90">R$ 24,90</p>
+
+                            <div class="flex gap-2">
+                                <button class="decrement bg-[#5a0f14] text-white px-3">-</button>
+                                <input type="text" value="1" class="qty w-12 text-center border">
+                                <button class="increment bg-[#5a0f14] text-white px-3">+</button>
+                            </div>
+
+                            <button class="remove-btn text-red-600 text-sm">Remover</button>
+                        </div>
+                    </div>
+
+                    <!-- ITEM -->
+                    <div class="item flex items-start gap-4 mb-6">
+                        <img src="./img/boloChoco.png" class="w-24 h-24 rounded-lg">
+
+                        <div class="flex flex-col gap-2">
+                            <span>Bolo de Chocolate</span>
+                            <p class="price" data-price="29.90">R$ 29,90</p>
+
+                            <div class="flex gap-2">
+                                <button class="decrement bg-[#5a0f14] text-white px-3">-</button>
+                                <input type="text" value="1" class="qty w-12 text-center border">
+                                <button class="increment bg-[#5a0f14] text-white px-3">+</button>
+                            </div>
+
+                            <button class="remove-btn text-red-600 text-sm">Remover</button>
+                        </div>
+                    </div>
+
+                    <!-- TOTAL -->
+                    <div class="text-right mt-6">
+                        <p>Subtotal: R$ <span id="subtotal">0.00</span></p>
+                        <p>Frete: R$ <span id="frete">0.00</span></p>
+                        <p class="font-bold">Total: R$ <span id="total">0.00</span></p>
+                    </div>
+
+                </div>
+
+                <!-- PAGAMENTO -->
+                <div class="border border-[#c9a3a3] bg-[#d9d9d9] rounded-xl p-6 w-full lg:max-w-sm shadow-xl">
+
+                    <h2 class="font-semibold mb-3">Detalhes de Pagamento</h2>
+
+                    <input id="nome" placeholder="Nome" class="border p-2 rounded w-full mb-2">
+                    <input id="telefone" placeholder="Telefone" class="border p-2 rounded w-full mb-2">
+                    <input id="cep" placeholder="CEP" class="border p-2 rounded w-full mb-2">
+
+                    <button id="calcFrete" class="bg-[#5a0f14] text-white w-full py-2 rounded mb-3">
+                        Calcular Frete
+                    </button>
+
+                    <select id="pagamento" class="border p-2 rounded w-full mb-3">
+                        <option>Cartão</option>
+                        <option>Pix</option>
+                        <option>Boleto</option>
+                    </select>
+                    <a href="pedidoFeito.html">
+                        <button class="bg-[#5a0f14] text-white w-full py-2 rounded">
+                            Pagar
+                        </button>
+                    </a>
+
+                </div>
 
             </div>
 
         </div>
-
-    </div>
     </main>
     <!-- FOOTER -->
     <footer class="border-t border-gray-200 flex-1 w-full sm:w-auto sm:pl-48 mt-2 bg-[##5a0f14]">
         <div class="mt-1 text-sm text-gray-500">
             <div>
                 <!-- MENU -->
-                <p class="text-lg text-center">Home | Cardápio | Doces | Bolos | Cafés</p>
+                <p class="text-lg text-center"> <a href="./index.html">Home</a> | <a href="./doces.html">Doces</a> | <a
+                        href="./bolos.html">Bolos</a> | <a href="./cafes.html">Cafés</a> | <a
+                        href="./carrinho.html">Carrinho</a></p>
             </div>
 
             <div class="flex items-center justify-between px-10 mt-5">
